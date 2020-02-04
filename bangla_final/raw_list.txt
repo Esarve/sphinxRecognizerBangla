@@ -1,0 +1,51 @@
+fan charo
+fan bondho koro
+light jalao
+light charo
+light nibhao
+fan on koro
+light bondho koro
+dorja khulo
+dorja lagao
+light off koro
+AC on koro
+AC off koro
+TV on koro
+TV off koro
+TV charo
+TV bondho koro
+AC charo
+AC bondho koro
+security on koro
+security off koro
+bedroom ligh off koro
+bedroom ligh on koro
+bedroom fan on koro
+bedroom fan off koro
+bedroom fan charo
+bedroom fan bondho koro
+bedroom light jalao
+bedroom ligh nibhao
+drawing room ligh off koro
+drawing room ligh on koro
+drawing room fan on koro
+drawing room fan off koro
+drawing room fan charo
+drawing room fan bondho koro
+drawing room light jalao
+drawing room ligh nibhao
+kitchen ligh off koro
+kitchen ligh on koro
+kitchen fan on koro
+kitchen fan off koro
+kitchen fan charo
+kitchen fan bondho koro
+kitchen light jalao
+kitchen ligh nibhao
+room ek er light jalao
+room ek er light nibhao
+room dui er light jalao
+room dui er light nibhao
+room tin er light jalao
+room tin er light nibhao
+

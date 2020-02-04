@@ -1,0 +1,209 @@
+Current configuration:
+[NAME]			[DEFLT]		[VALUE]
+-alpha			0.97		9.700000e-01
+-argfile				
+-blocksize		2048		2048
+-build_outdirs		yes		yes
+-c					/home/sourav/workdir/acoustic_model_final/etc/final_train.fileids
+-cep2spec		no		no
+-di					/home/sourav/workdir/acoustic_model_final/wav
+-dither			no		no
+-do					/home/sourav/workdir/acoustic_model_final/feat
+-doublebw		no		no
+-ei					wav
+-eo					mfc
+-example		no		no
+-frate			100		100
+-help			no		no
+-i					
+-input_endian		little		little
+-lifter			0		22
+-logspec		no		no
+-lowerf			133.33334	1.300000e+02
+-mach_endian		little		little
+-mswav			no		yes
+-ncep			13		13
+-nchans			1		1
+-nfft			512		512
+-nfilt			40		25
+-nist			no		no
+-npart			0		5
+-nskip			0		0
+-o					
+-ofmt			sphinx		sphinx
+-part			0		1
+-raw			no		no
+-remove_dc		no		no
+-remove_noise		yes		yes
+-remove_silence		yes		yes
+-round_filters		yes		yes
+-runlen			-1		-1
+-samprate		16000		1.600000e+04
+-seed			-1		-1
+-smoothspec		no		no
+-spec2cep		no		no
+-sph2pipe		no		no
+-transform		legacy		dct
+-unit_area		yes		yes
+-upperf			6855.4976	6.800000e+03
+-vad_postspeech		50		50
+-vad_prespeech		20		20
+-vad_startspeech	10		10
+-vad_threshold		3.0		3.000000e+00
+-verbose		no		no
+-warp_params				
+-warp_type		inverse_linear	inverse_linear
+-whichchan		0		0
+-wlen			0.025625	2.562500e-02
+
+INFO: sphinx_fe.c(967): Processing 149 utterances at position 0
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/01/1-1-01.wav to /home/sourav/workdir/acoustic_model_final/feat/01/1-1-01.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/01/1-1-02.wav to /home/sourav/workdir/acoustic_model_final/feat/01/1-1-02.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/01/1-1-03.wav to /home/sourav/workdir/acoustic_model_final/feat/01/1-1-03.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/01/1-1-04.wav to /home/sourav/workdir/acoustic_model_final/feat/01/1-1-04.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/01/1-1-05.wav to /home/sourav/workdir/acoustic_model_final/feat/01/1-1-05.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/01/1-2-01.wav to /home/sourav/workdir/acoustic_model_final/feat/01/1-2-01.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/01/1-2-02.wav to /home/sourav/workdir/acoustic_model_final/feat/01/1-2-02.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/01/1-2-03.wav to /home/sourav/workdir/acoustic_model_final/feat/01/1-2-03.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/01/1-2-04.wav to /home/sourav/workdir/acoustic_model_final/feat/01/1-2-04.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/01/1-2-05.wav to /home/sourav/workdir/acoustic_model_final/feat/01/1-2-05.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/01/1-3-01.wav to /home/sourav/workdir/acoustic_model_final/feat/01/1-3-01.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/01/1-3-02.wav to /home/sourav/workdir/acoustic_model_final/feat/01/1-3-02.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/01/1-3-03.wav to /home/sourav/workdir/acoustic_model_final/feat/01/1-3-03.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/01/1-3-04.wav to /home/sourav/workdir/acoustic_model_final/feat/01/1-3-04.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/01/1-3-05.wav to /home/sourav/workdir/acoustic_model_final/feat/01/1-3-05.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/01/1-4-01.wav to /home/sourav/workdir/acoustic_model_final/feat/01/1-4-01.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/01/1-4-02.wav to /home/sourav/workdir/acoustic_model_final/feat/01/1-4-02.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/01/1-4-03.wav to /home/sourav/workdir/acoustic_model_final/feat/01/1-4-03.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/01/1-4-04.wav to /home/sourav/workdir/acoustic_model_final/feat/01/1-4-04.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/01/1-4-05.wav to /home/sourav/workdir/acoustic_model_final/feat/01/1-4-05.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/01/1-5-01.wav to /home/sourav/workdir/acoustic_model_final/feat/01/1-5-01.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/01/1-5-02.wav to /home/sourav/workdir/acoustic_model_final/feat/01/1-5-02.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/01/1-5-03.wav to /home/sourav/workdir/acoustic_model_final/feat/01/1-5-03.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/01/1-5-04.wav to /home/sourav/workdir/acoustic_model_final/feat/01/1-5-04.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/01/1-5-05.wav to /home/sourav/workdir/acoustic_model_final/feat/01/1-5-05.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/02/2-1-01.wav to /home/sourav/workdir/acoustic_model_final/feat/02/2-1-01.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/02/2-1-02.wav to /home/sourav/workdir/acoustic_model_final/feat/02/2-1-02.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/02/2-1-03.wav to /home/sourav/workdir/acoustic_model_final/feat/02/2-1-03.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/02/2-1-04.wav to /home/sourav/workdir/acoustic_model_final/feat/02/2-1-04.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/02/2-1-05.wav to /home/sourav/workdir/acoustic_model_final/feat/02/2-1-05.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/02/2-2-01.wav to /home/sourav/workdir/acoustic_model_final/feat/02/2-2-01.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/02/2-2-02.wav to /home/sourav/workdir/acoustic_model_final/feat/02/2-2-02.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/02/2-2-03.wav to /home/sourav/workdir/acoustic_model_final/feat/02/2-2-03.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/02/2-2-04.wav to /home/sourav/workdir/acoustic_model_final/feat/02/2-2-04.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/02/2-2-05.wav to /home/sourav/workdir/acoustic_model_final/feat/02/2-2-05.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/02/2-3-01.wav to /home/sourav/workdir/acoustic_model_final/feat/02/2-3-01.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/02/2-3-02.wav to /home/sourav/workdir/acoustic_model_final/feat/02/2-3-02.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/02/2-3-03.wav to /home/sourav/workdir/acoustic_model_final/feat/02/2-3-03.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/02/2-3-04.wav to /home/sourav/workdir/acoustic_model_final/feat/02/2-3-04.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/02/2-3-05.wav to /home/sourav/workdir/acoustic_model_final/feat/02/2-3-05.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/02/2-4-01.wav to /home/sourav/workdir/acoustic_model_final/feat/02/2-4-01.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/02/2-4-02.wav to /home/sourav/workdir/acoustic_model_final/feat/02/2-4-02.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/02/2-4-03.wav to /home/sourav/workdir/acoustic_model_final/feat/02/2-4-03.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/02/2-4-04.wav to /home/sourav/workdir/acoustic_model_final/feat/02/2-4-04.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/02/2-4-05.wav to /home/sourav/workdir/acoustic_model_final/feat/02/2-4-05.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/02/2-5-01.wav to /home/sourav/workdir/acoustic_model_final/feat/02/2-5-01.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/02/2-5-02.wav to /home/sourav/workdir/acoustic_model_final/feat/02/2-5-02.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/02/2-5-03.wav to /home/sourav/workdir/acoustic_model_final/feat/02/2-5-03.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/02/2-5-04.wav to /home/sourav/workdir/acoustic_model_final/feat/02/2-5-04.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/02/2-5-05.wav to /home/sourav/workdir/acoustic_model_final/feat/02/2-5-05.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/04/4-1-01.wav to /home/sourav/workdir/acoustic_model_final/feat/04/4-1-01.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/04/4-1-02.wav to /home/sourav/workdir/acoustic_model_final/feat/04/4-1-02.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/04/4-1-03.wav to /home/sourav/workdir/acoustic_model_final/feat/04/4-1-03.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/04/4-1-04.wav to /home/sourav/workdir/acoustic_model_final/feat/04/4-1-04.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/04/4-1-05.wav to /home/sourav/workdir/acoustic_model_final/feat/04/4-1-05.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/04/4-2-01.wav to /home/sourav/workdir/acoustic_model_final/feat/04/4-2-01.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/04/4-2-02.wav to /home/sourav/workdir/acoustic_model_final/feat/04/4-2-02.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/04/4-2-03.wav to /home/sourav/workdir/acoustic_model_final/feat/04/4-2-03.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/04/4-2-04.wav to /home/sourav/workdir/acoustic_model_final/feat/04/4-2-04.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/04/4-2-05.wav to /home/sourav/workdir/acoustic_model_final/feat/04/4-2-05.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/04/4-3-01.wav to /home/sourav/workdir/acoustic_model_final/feat/04/4-3-01.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/04/4-3-02.wav to /home/sourav/workdir/acoustic_model_final/feat/04/4-3-02.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/04/4-3-03.wav to /home/sourav/workdir/acoustic_model_final/feat/04/4-3-03.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/04/4-3-04.wav to /home/sourav/workdir/acoustic_model_final/feat/04/4-3-04.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/04/4-3-05.wav to /home/sourav/workdir/acoustic_model_final/feat/04/4-3-05.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/04/4-4-01.wav to /home/sourav/workdir/acoustic_model_final/feat/04/4-4-01.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/04/4-4-02.wav to /home/sourav/workdir/acoustic_model_final/feat/04/4-4-02.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/04/4-4-03.wav to /home/sourav/workdir/acoustic_model_final/feat/04/4-4-03.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/04/4-4-04.wav to /home/sourav/workdir/acoustic_model_final/feat/04/4-4-04.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/04/4-4-05.wav to /home/sourav/workdir/acoustic_model_final/feat/04/4-4-05.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/04/4-5-01.wav to /home/sourav/workdir/acoustic_model_final/feat/04/4-5-01.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/04/4-5-02.wav to /home/sourav/workdir/acoustic_model_final/feat/04/4-5-02.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/04/4-5-03.wav to /home/sourav/workdir/acoustic_model_final/feat/04/4-5-03.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/04/4-5-04.wav to /home/sourav/workdir/acoustic_model_final/feat/04/4-5-04.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/04/4-5-05.wav to /home/sourav/workdir/acoustic_model_final/feat/04/4-5-05.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/05/5-1-01.wav to /home/sourav/workdir/acoustic_model_final/feat/05/5-1-01.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/05/5-1-02.wav to /home/sourav/workdir/acoustic_model_final/feat/05/5-1-02.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/05/5-1-03.wav to /home/sourav/workdir/acoustic_model_final/feat/05/5-1-03.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/05/5-1-04.wav to /home/sourav/workdir/acoustic_model_final/feat/05/5-1-04.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/05/5-1-05.wav to /home/sourav/workdir/acoustic_model_final/feat/05/5-1-05.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/05/5-2-01.wav to /home/sourav/workdir/acoustic_model_final/feat/05/5-2-01.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/05/5-2-02.wav to /home/sourav/workdir/acoustic_model_final/feat/05/5-2-02.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/05/5-2-03.wav to /home/sourav/workdir/acoustic_model_final/feat/05/5-2-03.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/05/5-2-04.wav to /home/sourav/workdir/acoustic_model_final/feat/05/5-2-04.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/05/5-2-05.wav to /home/sourav/workdir/acoustic_model_final/feat/05/5-2-05.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/05/5-3-01.wav to /home/sourav/workdir/acoustic_model_final/feat/05/5-3-01.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/05/5-3-02.wav to /home/sourav/workdir/acoustic_model_final/feat/05/5-3-02.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/05/5-3-03.wav to /home/sourav/workdir/acoustic_model_final/feat/05/5-3-03.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/05/5-3-04.wav to /home/sourav/workdir/acoustic_model_final/feat/05/5-3-04.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/05/5-3-05.wav to /home/sourav/workdir/acoustic_model_final/feat/05/5-3-05.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/05/5-4-01.wav to /home/sourav/workdir/acoustic_model_final/feat/05/5-4-01.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/05/5-4-02.wav to /home/sourav/workdir/acoustic_model_final/feat/05/5-4-02.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/05/5-4-03.wav to /home/sourav/workdir/acoustic_model_final/feat/05/5-4-03.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/05/5-4-04.wav to /home/sourav/workdir/acoustic_model_final/feat/05/5-4-04.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/05/5-4-05.wav to /home/sourav/workdir/acoustic_model_final/feat/05/5-4-05.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/05/5-5-01.wav to /home/sourav/workdir/acoustic_model_final/feat/05/5-5-01.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/05/5-5-02.wav to /home/sourav/workdir/acoustic_model_final/feat/05/5-5-02.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/05/5-5-03.wav to /home/sourav/workdir/acoustic_model_final/feat/05/5-5-03.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/05/5-5-04.wav to /home/sourav/workdir/acoustic_model_final/feat/05/5-5-04.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/05/5-5-05.wav to /home/sourav/workdir/acoustic_model_final/feat/05/5-5-05.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/06/6-1-01.wav to /home/sourav/workdir/acoustic_model_final/feat/06/6-1-01.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/06/6-1-02.wav to /home/sourav/workdir/acoustic_model_final/feat/06/6-1-02.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/06/6-1-03.wav to /home/sourav/workdir/acoustic_model_final/feat/06/6-1-03.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/06/6-1-04.wav to /home/sourav/workdir/acoustic_model_final/feat/06/6-1-04.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/06/6-1-05.wav to /home/sourav/workdir/acoustic_model_final/feat/06/6-1-05.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/06/6-2-01.wav to /home/sourav/workdir/acoustic_model_final/feat/06/6-2-01.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/06/6-2-02.wav to /home/sourav/workdir/acoustic_model_final/feat/06/6-2-02.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/06/6-2-03.wav to /home/sourav/workdir/acoustic_model_final/feat/06/6-2-03.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/06/6-2-04.wav to /home/sourav/workdir/acoustic_model_final/feat/06/6-2-04.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/06/6-2-05.wav to /home/sourav/workdir/acoustic_model_final/feat/06/6-2-05.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/06/6-3-01.wav to /home/sourav/workdir/acoustic_model_final/feat/06/6-3-01.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/06/6-3-02.wav to /home/sourav/workdir/acoustic_model_final/feat/06/6-3-02.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/06/6-3-03.wav to /home/sourav/workdir/acoustic_model_final/feat/06/6-3-03.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/06/6-3-04.wav to /home/sourav/workdir/acoustic_model_final/feat/06/6-3-04.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/06/6-3-05.wav to /home/sourav/workdir/acoustic_model_final/feat/06/6-3-05.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/06/6-4-01.wav to /home/sourav/workdir/acoustic_model_final/feat/06/6-4-01.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/06/6-4-02.wav to /home/sourav/workdir/acoustic_model_final/feat/06/6-4-02.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/06/6-4-03.wav to /home/sourav/workdir/acoustic_model_final/feat/06/6-4-03.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/06/6-4-04.wav to /home/sourav/workdir/acoustic_model_final/feat/06/6-4-04.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/06/6-4-05.wav to /home/sourav/workdir/acoustic_model_final/feat/06/6-4-05.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/06/6-5-01.wav to /home/sourav/workdir/acoustic_model_final/feat/06/6-5-01.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/06/6-5-02.wav to /home/sourav/workdir/acoustic_model_final/feat/06/6-5-02.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/06/6-5-03.wav to /home/sourav/workdir/acoustic_model_final/feat/06/6-5-03.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/06/6-5-04.wav to /home/sourav/workdir/acoustic_model_final/feat/06/6-5-04.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/06/6-5-05.wav to /home/sourav/workdir/acoustic_model_final/feat/06/6-5-05.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/07/7-1-01.wav to /home/sourav/workdir/acoustic_model_final/feat/07/7-1-01.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/07/7-1-02.wav to /home/sourav/workdir/acoustic_model_final/feat/07/7-1-02.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/07/7-1-03.wav to /home/sourav/workdir/acoustic_model_final/feat/07/7-1-03.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/07/7-1-04.wav to /home/sourav/workdir/acoustic_model_final/feat/07/7-1-04.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/07/7-1-05.wav to /home/sourav/workdir/acoustic_model_final/feat/07/7-1-05.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/07/7-2-01.wav to /home/sourav/workdir/acoustic_model_final/feat/07/7-2-01.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/07/7-2-02.wav to /home/sourav/workdir/acoustic_model_final/feat/07/7-2-02.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/07/7-2-03.wav to /home/sourav/workdir/acoustic_model_final/feat/07/7-2-03.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/07/7-2-04.wav to /home/sourav/workdir/acoustic_model_final/feat/07/7-2-04.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/07/7-2-05.wav to /home/sourav/workdir/acoustic_model_final/feat/07/7-2-05.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/07/7-3-01.wav to /home/sourav/workdir/acoustic_model_final/feat/07/7-3-01.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/07/7-3-02.wav to /home/sourav/workdir/acoustic_model_final/feat/07/7-3-02.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/07/7-3-03.wav to /home/sourav/workdir/acoustic_model_final/feat/07/7-3-03.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/07/7-3-04.wav to /home/sourav/workdir/acoustic_model_final/feat/07/7-3-04.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/07/7-3-05.wav to /home/sourav/workdir/acoustic_model_final/feat/07/7-3-05.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/07/7-4-01.wav to /home/sourav/workdir/acoustic_model_final/feat/07/7-4-01.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/07/7-4-02.wav to /home/sourav/workdir/acoustic_model_final/feat/07/7-4-02.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/07/7-4-03.wav to /home/sourav/workdir/acoustic_model_final/feat/07/7-4-03.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/07/7-4-04.wav to /home/sourav/workdir/acoustic_model_final/feat/07/7-4-04.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/07/7-4-05.wav to /home/sourav/workdir/acoustic_model_final/feat/07/7-4-05.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/07/7-5-01.wav to /home/sourav/workdir/acoustic_model_final/feat/07/7-5-01.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/07/7-5-02.wav to /home/sourav/workdir/acoustic_model_final/feat/07/7-5-02.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/07/7-5-03.wav to /home/sourav/workdir/acoustic_model_final/feat/07/7-5-03.mfc
+INFO: sphinx_fe.c(791): Converting /home/sourav/workdir/acoustic_model_final/wav/07/7-5-04.wav to /home/sourav/workdir/acoustic_model_final/feat/07/7-5-04.mfc
+Thu Dec  5 21:23:51 2019

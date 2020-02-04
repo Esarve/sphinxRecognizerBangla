@@ -1,0 +1,305 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta http-equiv="REFRESH" content="60">
+<title>final</title>
+<style type="text/css">
+body {
+ background: #f0f0f5;
+}
+p,span {
+ font-family: monospace;
+}
+p {
+ margin-right: 6em;
+}
+p.phase {
+ font-weight: bold;
+ margin-bottom: 0;
+}
+p.result, p.WARNING, p.error {
+ margin-top: 0;
+ margin-bottom: 0;
+ margin-left: 5em;
+}
+span.status {
+ float: right;
+ margin-top: -1em;
+}
+.passed, .completed {
+ color: #00D000;
+}
+.WARNING, .warning {
+ color: #555500;
+}
+.FAILED, .error {
+ color: #DD0000;
+}
+</style>
+</head>
+<body>
+<h1 class="experiment">/home/sourav/workdir/acoustic_model_final</h1>
+<h2 class="hostname">Training final on Zephyrus-Linux</h2>
+<hr>
+<h3>MODULE: 000 Computing feature from audio files	(2019-12-05 21:23)</h3>
+<p class='audio files'>Extracting features from  segments starting at  (part 3 of 5) </p>
+<p class='audio files'>Extracting features from  segments starting at  (part 2 of 5) </p>
+<p class='result'>sphinx_fe <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/000.comp_feat/final.train-3-5.log">Log File</a></p><p class='result'>sphinx_fe <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/000.comp_feat/final.train-2-5.log">Log File</a></p><p class='audio files'>Extracting features from  segments starting at  (part 1 of 5) </p>
+<p class='result'>sphinx_fe <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/000.comp_feat/final.train-1-5.log">Log File</a></p><p class='audio files'>Extracting features from  segments starting at  (part 3 of 5) </p>
+<p class='result'>sphinx_fe <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/000.comp_feat/final.test-3-5.log">Log File</a></p><p class='audio files'>Extracting features from  segments starting at  (part 4 of 5) </p>
+<p class='result'>sphinx_fe <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/000.comp_feat/final.test-4-5.log">Log File</a></p><p class='audio files'>Extracting features from  segments starting at  (part 5 of 5) </p>
+<p class='result'>sphinx_fe <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/000.comp_feat/final.test-5-5.log">Log File</a></p><p class='audio files'>Extracting features from  segments starting at  (part 4 of 5) </p>
+<p class='result'>sphinx_fe <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/000.comp_feat/final.train-4-5.log">Log File</a></p><p class='audio files'>Extracting features from  segments starting at  (part 1 of 5) </p>
+<p class='result'>sphinx_fe <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/000.comp_feat/final.test-1-5.log">Log File</a></p><p class='audio files'>Extracting features from  segments starting at  (part 2 of 5) </p>
+<p class='result'>sphinx_fe <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/000.comp_feat/final.test-2-5.log">Log File</a></p><p class='audio files'>Extracting features from  segments starting at  (part 5 of 5) </p>
+<p class='result'>sphinx_fe <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/000.comp_feat/final.train-5-5.log">Log File</a></p><span class='status completed'>completed</span>
+<span class='status completed'>completed</span>
+<span class='status completed'>completed</span>
+<span class='status completed'>completed</span>
+<span class='status completed'>completed</span>
+<span class='status completed'>completed</span>
+<span class='status completed'>completed</span>
+<span class='status completed'>completed</span>
+<span class='status completed'>completed</span>
+<span class='status completed'>completed</span>
+<p>Feature extraction is done</p>
+<hr>
+<h3>MODULE: 00 verify training files	(2019-12-05 21:23)</h3>
+<p class='phase'>Phase 1: Checking to see if the dict and filler dict agrees with the phonelist file.</p>
+<p class='result'>Found 43 words using 35 phones</p>
+<span class='status passed'>passed</span>
+<p class='phase'>Phase 2: Checking to make sure there are not duplicate entries in the dictionary</p>
+<span class='status passed'>passed</span>
+<p class='phase'>Phase 3: Check general format for the fileids file; utterance length (must be positive); files exist</p>
+<span class='status passed'>passed</span>
+<p class='phase'>Phase 4: Checking number of lines in the transcript file should match lines in fileids file</p>
+<span class='status passed'>passed</span>
+<p class='phase'>Phase 5: Determine amount of training data, see if n_tied_states seems reasonable.</p>
+<p class='result'>Estimated Total Hours Training: 0.224161111111111</p>
+<p class='result'>This is a small amount of data, no comment at this time</p>
+<span class='status WARNING'>WARNING</span>
+<p class='phase'>Phase 6: Checking that all the words in the transcript are in the dictionary</p>
+<p class='result'>Words in dictionary: 40</p>
+<p class='result'>Words in filler dictionary: 3</p>
+<span class='status passed'>passed</span>
+<p class='phase'>Phase 7: Checking that all the phones in the transcript are in the phonelist, and all phones in the phonelist appear at least once</p>
+<p class='warning'>WARNING: This phone (JA) occurs in the phonelist (/home/sourav/workdir/acoustic_model_final/etc/final.phone), but not in any word in the transcription (/home/sourav/workdir/acoustic_model_final/etc/final_train.transcription)</p>
+<p class='warning'>WARNING: This phone (NG) occurs in the phonelist (/home/sourav/workdir/acoustic_model_final/etc/final.phone), but not in any word in the transcription (/home/sourav/workdir/acoustic_model_final/etc/final_train.transcription)</p>
+<p class='warning'>WARNING: This phone (TH) occurs in the phonelist (/home/sourav/workdir/acoustic_model_final/etc/final.phone), but not in any word in the transcription (/home/sourav/workdir/acoustic_model_final/etc/final_train.transcription)</p>
+<p class='warning'>WARNING: This phone (TY) occurs in the phonelist (/home/sourav/workdir/acoustic_model_final/etc/final.phone), but not in any word in the transcription (/home/sourav/workdir/acoustic_model_final/etc/final_train.transcription)</p>
+<p class='warning'>WARNING: This phone (ZH) occurs in the phonelist (/home/sourav/workdir/acoustic_model_final/etc/final.phone), but not in any word in the transcription (/home/sourav/workdir/acoustic_model_final/etc/final_train.transcription)</p>
+<span class='status FAILED'>FAILED</span>
+<hr>
+<h3>MODULE: 0000 train grapheme-to-phoneme model	(2019-12-05 21:23)</h3>
+<p class='phase'>Phase 1: Cleaning up directories: logs...</p>
+<p class='phase'>Phase 2: Training g2p model...</p>
+<p class='result'>g2p_train <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/0000.g2p_train/final.g2p.training.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='phase'>Phase 3: Evaluating g2p model...</p>
+<p class='result'>/usr/local/lib/sphinxtrain/scripts/0000.g2p_train/evaluate.py <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/0000.g2p_train/final.g2p.evaluate.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='phase'>Phase 4: Creating pronunciations for OOV words...</p>
+<p class='result'>phonetisaurus-g2p <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/0000.g2p_train/final.g2p.make_dict.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='phase'>Phase 5: Merging primary and OOV dictionaries...</p>
+<span class='status completed'>completed</span>
+<p class='phase'>Phase 5: Merging primary and OOV dictionaries...</p>
+<span class='status completed'>completed</span>
+<p class='phase'>Phase 3: Evaluating g2p model...</p>
+<p class='result'>/usr/local/lib/sphinxtrain/scripts/0000.g2p_train/evaluate.py <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/0000.g2p_train/final.g2p.evaluate.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='phase'>Phase 4: Creating pronunciations for OOV words...</p>
+<p class='result'>phonetisaurus-g2p <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/0000.g2p_train/final.g2p.make_dict.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='phase'>Phase 5: Merging primary and OOV dictionaries...</p>
+<span class='status completed'>completed</span>
+<p class='phase'>Phase 5: Merging primary and OOV dictionaries...</p>
+<hr>
+<h3>MODULE: 01 Train LDA transformation	(2019-12-05 21:23)</h3>
+<p>Skipped for multistream setup, see CFG_NUM_STREAMS configuration</p>
+<p>LDA/MLLT only has sense for single stream features</p>
+<p>Skipping LDA training</p>
+<hr>
+<h3>MODULE: 02 Train MLLT transformation	(2019-12-05 21:23)</h3>
+<p>Skipped for multistream setup, see CFG_NUM_STREAMS configuration</p>
+<p>LDA/MLLT only has sense for single stream features</p>
+<p>Skipping MLLT training</p>
+<hr>
+<h3>MODULE: 05 Vector Quantization	(2019-12-05 21:23)</h3>
+<p class='result'>agg_seg <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/05.vector_quantize/final.vq.agg_seg.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>kmeans_init <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/05.vector_quantize/final.kmeans.log">Log File</a></p><span class='status completed'>completed</span>
+<hr>
+<h3>MODULE: 10 Training Context Independent models for forced alignment and VTLN	(2019-12-05 21:24)</h3>
+<p>Skipped:  $ST::CFG_FORCEDALIGN set to 'no' in sphinx_train.cfg</p>
+<p>Skipped:  $ST::CFG_VTLN set to 'no' in sphinx_train.cfg</p>
+<hr>
+<h3>MODULE: 11 Force-aligning transcripts	(2019-12-05 21:24)</h3>
+<p>Skipped:  $ST::CFG_FORCEDALIGN set to 'no' in sphinx_train.cfg</p>
+<hr>
+<h3>MODULE: 12 Force-aligning data for VTLN	(2019-12-05 21:24)</h3>
+<p>Skipped:  $ST::CFG_VTLN set to 'no' in sphinx_train.cfg</p>
+<hr>
+<h3>MODULE: 20 Training Context Independent models	(2019-12-05 21:24)</h3>
+<p class='phase'>Phase 1: Cleaning up directories:</p>
+<span class='progress'>	accumulator...</span>
+<span class='progress'>logs...</span>
+<span class='progress'>qmanager...</span>
+<span class='progress'>models...
+</span>
+<span class='status completed'>completed</span>
+<p class='phase'>Phase 2: Flat initialize</p>
+<p class='result'>mk_mdef_gen <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.make_ci_mdef_fromphonelist.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>mk_flat <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.makeflat_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>init_mixw <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.duplicate_codebook.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='phase'>Phase 3: Forward-Backward</p>
+<p class='result'>Baum welch starting for 256 Gaussian(s), iteration: 1 (3 of 5)</p>
+<p class='result'>bw <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.1-3.bw.log">Log File</a></p><p class='result'>Baum welch starting for 256 Gaussian(s), iteration: 1 (4 of 5)</p>
+<p class='result'>bw <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.1-4.bw.log">Log File</a></p><p class='result'>Baum welch starting for 256 Gaussian(s), iteration: 1 (2 of 5)</p>
+<p class='result'>bw <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.1-2.bw.log">Log File</a></p><p class='result'>Baum welch starting for 256 Gaussian(s), iteration: 1 (5 of 5)</p>
+<p class='result'>bw <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.1-5.bw.log">Log File</a></p><p class='result'>Baum welch starting for 256 Gaussian(s), iteration: 1 (1 of 5)</p>
+<p class='result'>bw <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.1-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<span class='status completed'>completed</span>
+<span class='status completed'>completed</span>
+<span class='status completed'>completed</span>
+<span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 1</p>
+<p class='result'>norm <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.1.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -212.113546804134</p>
+<p class='result'>Baum welch starting for 256 Gaussian(s), iteration: 2 (1 of 5)</p>
+<p class='result'>bw <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.2-1.bw.log">Log File</a></p><p class='result'>Baum welch starting for 256 Gaussian(s), iteration: 2 (3 of 5)</p>
+<p class='result'>bw <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.2-3.bw.log">Log File</a></p><p class='result'>Baum welch starting for 256 Gaussian(s), iteration: 2 (2 of 5)</p>
+<p class='result'>bw <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.2-2.bw.log">Log File</a></p><p class='result'>Baum welch starting for 256 Gaussian(s), iteration: 2 (5 of 5)</p>
+<p class='result'>bw <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.2-5.bw.log">Log File</a></p><p class='result'>Baum welch starting for 256 Gaussian(s), iteration: 2 (4 of 5)</p>
+<p class='result'>bw <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.2-4.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<span class='status completed'>completed</span>
+<span class='status completed'>completed</span>
+<span class='status completed'>completed</span>
+<span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 2</p>
+<p class='result'>norm <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.2.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -201.824692061761</p>
+<p class='result'>Convergence Ratio = 10.2888547423728</p>
+<p class='result'>Baum welch starting for 256 Gaussian(s), iteration: 3 (3 of 5)</p>
+<p class='result'>bw <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.3-3.bw.log">Log File</a></p><p class='result'>Baum welch starting for 256 Gaussian(s), iteration: 3 (2 of 5)</p>
+<p class='result'>bw <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.3-2.bw.log">Log File</a></p><p class='result'>Baum welch starting for 256 Gaussian(s), iteration: 3 (1 of 5)</p>
+<p class='result'>bw <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.3-1.bw.log">Log File</a></p><p class='result'>Baum welch starting for 256 Gaussian(s), iteration: 3 (4 of 5)</p>
+<p class='result'>bw <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.3-4.bw.log">Log File</a></p><p class='result'>Baum welch starting for 256 Gaussian(s), iteration: 3 (5 of 5)</p>
+<p class='result'>bw <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.3-5.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<span class='status completed'>completed</span>
+<span class='status completed'>completed</span>
+<span class='status completed'>completed</span>
+<span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 3</p>
+<p class='result'>norm <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.3.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -196.109023767627</p>
+<p class='result'>Convergence Ratio = 5.71566829413354</p>
+<p class='result'>Baum welch starting for 256 Gaussian(s), iteration: 4 (2 of 5)</p>
+<p class='result'>bw <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.4-2.bw.log">Log File</a></p><p class='result'>Baum welch starting for 256 Gaussian(s), iteration: 4 (3 of 5)</p>
+<p class='result'>bw <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.4-3.bw.log">Log File</a></p><p class='result'>Baum welch starting for 256 Gaussian(s), iteration: 4 (1 of 5)</p>
+<p class='result'>bw <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.4-1.bw.log">Log File</a></p><p class='result'>Baum welch starting for 256 Gaussian(s), iteration: 4 (5 of 5)</p>
+<p class='result'>bw <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.4-5.bw.log">Log File</a></p><p class='result'>Baum welch starting for 256 Gaussian(s), iteration: 4 (4 of 5)</p>
+<p class='result'>bw <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.4-4.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<span class='status completed'>completed</span>
+<span class='status completed'>completed</span>
+<span class='status completed'>completed</span>
+<span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 4</p>
+<p class='result'>norm <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.4.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -190.443641725941</p>
+<p class='result'>Convergence Ratio = 5.66538204168583</p>
+<p class='result'>Baum welch starting for 256 Gaussian(s), iteration: 5 (2 of 5)</p>
+<p class='result'>bw <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.5-2.bw.log">Log File</a></p><p class='result'>Baum welch starting for 256 Gaussian(s), iteration: 5 (1 of 5)</p>
+<p class='result'>bw <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.5-1.bw.log">Log File</a></p><p class='result'>Baum welch starting for 256 Gaussian(s), iteration: 5 (3 of 5)</p>
+<p class='result'>bw <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.5-3.bw.log">Log File</a></p><p class='result'>Baum welch starting for 256 Gaussian(s), iteration: 5 (5 of 5)</p>
+<p class='result'>bw <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.5-5.bw.log">Log File</a></p><p class='result'>Baum welch starting for 256 Gaussian(s), iteration: 5 (4 of 5)</p>
+<p class='result'>bw <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.5-4.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<span class='status completed'>completed</span>
+<span class='status completed'>completed</span>
+<span class='status completed'>completed</span>
+<span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 5</p>
+<p class='result'>norm <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.5.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -186.529641378969</p>
+<p class='result'>Convergence Ratio = 3.9140003469725</p>
+<p class='result'>Baum welch starting for 256 Gaussian(s), iteration: 6 (1 of 5)</p>
+<p class='result'>bw <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.6-1.bw.log">Log File</a></p><p class='result'>Baum welch starting for 256 Gaussian(s), iteration: 6 (2 of 5)</p>
+<p class='result'>bw <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.6-2.bw.log">Log File</a></p><p class='result'>Baum welch starting for 256 Gaussian(s), iteration: 6 (3 of 5)</p>
+<p class='result'>bw <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.6-3.bw.log">Log File</a></p><p class='result'>Baum welch starting for 256 Gaussian(s), iteration: 6 (5 of 5)</p>
+<p class='result'>bw <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.6-5.bw.log">Log File</a></p><p class='result'>Baum welch starting for 256 Gaussian(s), iteration: 6 (4 of 5)</p>
+<p class='result'>bw <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.6-4.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<span class='status completed'>completed</span>
+<span class='status completed'>completed</span>
+<span class='status completed'>completed</span>
+<span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 6</p>
+<p class='result'>norm <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.6.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -184.028129569506</p>
+<p class='result'>Convergence Ratio = 2.50151180946293</p>
+<p class='result'>Baum welch starting for 256 Gaussian(s), iteration: 7 (4 of 5)</p>
+<p class='result'>bw <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.7-4.bw.log">Log File</a></p><p class='result'>Baum welch starting for 256 Gaussian(s), iteration: 7 (2 of 5)</p>
+<p class='result'>bw <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.7-2.bw.log">Log File</a></p><p class='result'>Baum welch starting for 256 Gaussian(s), iteration: 7 (1 of 5)</p>
+<p class='result'>bw <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.7-1.bw.log">Log File</a></p><p class='result'>Baum welch starting for 256 Gaussian(s), iteration: 7 (3 of 5)</p>
+<p class='result'>bw <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.7-3.bw.log">Log File</a></p><p class='result'>Baum welch starting for 256 Gaussian(s), iteration: 7 (5 of 5)</p>
+<p class='result'>bw <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.7-5.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<span class='status completed'>completed</span>
+<span class='status completed'>completed</span>
+<span class='status completed'>completed</span>
+<span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 7</p>
+<p class='result'>norm <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.7.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -182.491536345386</p>
+<p class='result'>Convergence Ratio = 1.53659322411951</p>
+<p class='result'>Baum welch starting for 256 Gaussian(s), iteration: 8 (2 of 5)</p>
+<p class='result'>bw <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.8-2.bw.log">Log File</a></p><p class='result'>Baum welch starting for 256 Gaussian(s), iteration: 8 (3 of 5)</p>
+<p class='result'>bw <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.8-3.bw.log">Log File</a></p><p class='result'>Baum welch starting for 256 Gaussian(s), iteration: 8 (1 of 5)</p>
+<p class='result'>bw <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.8-1.bw.log">Log File</a></p><p class='result'>Baum welch starting for 256 Gaussian(s), iteration: 8 (5 of 5)</p>
+<p class='result'>bw <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.8-5.bw.log">Log File</a></p><p class='result'>Baum welch starting for 256 Gaussian(s), iteration: 8 (4 of 5)</p>
+<p class='result'>bw <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.8-4.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<span class='status completed'>completed</span>
+<span class='status completed'>completed</span>
+<span class='status completed'>completed</span>
+<span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 8</p>
+<p class='result'>norm <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.8.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -181.57127809859</p>
+<p class='result'>Convergence Ratio = 0.920258246796209</p>
+<p class='result'>Baum welch starting for 256 Gaussian(s), iteration: 9 (3 of 5)</p>
+<p class='result'>bw <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.9-3.bw.log">Log File</a></p><p class='result'>Baum welch starting for 256 Gaussian(s), iteration: 9 (1 of 5)</p>
+<p class='result'>bw <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.9-1.bw.log">Log File</a></p><p class='result'>Baum welch starting for 256 Gaussian(s), iteration: 9 (2 of 5)</p>
+<p class='result'>bw <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.9-2.bw.log">Log File</a></p><p class='result'>Baum welch starting for 256 Gaussian(s), iteration: 9 (4 of 5)</p>
+<p class='result'>bw <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.9-4.bw.log">Log File</a></p><p class='result'>Baum welch starting for 256 Gaussian(s), iteration: 9 (5 of 5)</p>
+<p class='result'>bw <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.9-5.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<span class='status completed'>completed</span>
+<span class='status completed'>completed</span>
+<span class='status completed'>completed</span>
+<span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 9</p>
+<p class='result'>norm <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.9.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -180.906490867184</p>
+<p class='result'>Convergence Ratio = 0.664787231406166</p>
+<p class='result'>Baum welch starting for 256 Gaussian(s), iteration: 10 (1 of 5)</p>
+<p class='result'>bw <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.10-1.bw.log">Log File</a></p><p class='result'>Baum welch starting for 256 Gaussian(s), iteration: 10 (3 of 5)</p>
+<p class='result'>bw <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.10-3.bw.log">Log File</a></p><p class='result'>Baum welch starting for 256 Gaussian(s), iteration: 10 (5 of 5)</p>
+<p class='result'>bw <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.10-5.bw.log">Log File</a></p><p class='result'>Baum welch starting for 256 Gaussian(s), iteration: 10 (2 of 5)</p>
+<p class='result'>bw <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.10-2.bw.log">Log File</a></p><p class='result'>Baum welch starting for 256 Gaussian(s), iteration: 10 (4 of 5)</p>
+<p class='result'>bw <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.10-4.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<span class='status completed'>completed</span>
+<span class='status completed'>completed</span>
+<span class='status completed'>completed</span>
+<span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 10</p>
+<p class='result'>norm <a href="file:///home/sourav/workdir/acoustic_model_final/logdir/20.ci_hmm/final.256.10.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Maximum desired iterations 10 performed. Terminating CI training</p>
+<p class='result'>Training completed after 10 iterations</p>
+<p>Skipped (set $CFG_CD_TRAIN = 'yes' to enable)</p>
+<p>Skipped (set $CFG_CD_TRAIN = 'yes' to enable)</p>
+<p>Skipped (set $CFG_CD_TRAIN = 'yes' to enable)</p>
+<p>Skipped (set $CFG_CD_TRAIN = 'yes' to enable)</p>
+<hr>
+<h3>MODULE: 60 Lattice Generation	(2019-12-05 21:25)</h3>
+<p class='phase'>Phase 1: Cleaning up directories ...</p>
+<span class='progress'>log...</span>
+<span class='progress'>qmanager...</span>
+<span class='progress'>numlat...</span>
+<span class='progress'>denlat...</span>
+<span class='progress'>
+</span>
+<p class='phase'>Phase 2: Generating numerator lattices ...</p>
+<p>Skipped: No sphinx3_align(.exe) found in /usr/local/libexec/sphinxtrain</p>
+<p>If you wish to generate numerator lattices, please copy or link the</p>
+<p>sphinx3_align binary from Sphinx 3 to /usr/local/libexec/sphinxtrain</p>

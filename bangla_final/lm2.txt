@@ -1,0 +1,50 @@
+<s> fan charo </s>
+<s> fan bondho koro </s>
+<s> light jalao </s>
+<s> light charo </s>
+<s> light nibhao </s>
+<s> fan on koro </s>
+<s> light bondho koro </s>
+<s> dorja khulo </s>
+<s> dorja lagao </s>
+<s> light off koro </s>
+<s> AC on koro </s>
+<s> AC off koro </s>
+<s> TV on koro </s>
+<s> TV off koro </s>
+<s> TV charo </s>
+<s> TV bondho koro </s>
+<s> AC charo </s>
+<s> AC bondho koro </s>
+<s> security on koro </s>
+<s> security off koro </s>
+<s> bedroom er light off koro </s>
+<s> bedroom er light on koro </s>
+<s> bedroom er fan on koro </s>
+<s> bedroom er fan off koro </s>
+<s> bedroom er fan charo </s>
+<s> bedroom er fan bondho koro </s>
+<s> bedroom er light jalao </s>
+<s> bedroom er light nibhao </s>
+<s> drawing er room ligh off koro </s>
+<s> drawing er room ligh on koro </s>
+<s> drawing er room fan on koro </s>
+<s> drawing er room fan off koro </s>
+<s> drawing er room fan charo </s>
+<s> drawing er room fan bondho koro </s>
+<s> drawing er room light jalao </s>
+<s> drawing er room ligh nibhao </s>
+<s> kitchen er light off koro </s>
+<s> kitchen er light on koro </s>
+<s> kitchen er fan on koro </s>
+<s> kitchen er fan off koro </s>
+<s> kitchen er fan charo </s>
+<s> kitchen er fan bondho koro </s>
+<s> kitchen er light jalao </s>
+<s> kitchen er light nibhao </s>
+<s> room ek er light jalao </s>
+<s> room ek er light nibhao </s>
+<s> room dui er light jalao </s>
+<s> room dui er light nibhao </s>
+<s> room tin er light jalao </s>
+<s> room tin er light nibhao </s>

@@ -1,0 +1,5 @@
+  File "/usr/local/lib/sphinxtrain/scripts/0000.g2p_train/evaluate.py", line 40
+    if verbose: print "Preprocessing the testset dictionary file..."
+                      ^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print("Preprocessing the testset dictionary file...")?
+Thu Dec  5 21:23:51 2019
