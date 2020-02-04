@@ -1,0 +1,2084 @@
+#############################################################################
+## Copyright (c) 1996, Carnegie Mellon University, Cambridge University,
+## Ronald Rosenfeld and Philip Clarkson
+## Version 3, Copyright (c) 2006, Carnegie Mellon University 
+## Contributors includes Wen Xu, Ananlada Chotimongkol, 
+## David Huggins-Daines, Arthur Chan and Alan Black 
+#############################################################################
+=============================================================================
+===============  This file was produced by the CMU-Cambridge  ===============
+===============     Statistical Language Modeling Toolkit     ===============
+=============================================================================
+This is a 3-gram language model, based on a vocabulary of 377 words,
+  which begins "0neke", "2016", "</s>"...
+This is a CLOSED-vocabulary model
+  (OOVs eliminated from training data and are forbidden in test data)
+Good-Turing discounting was applied.
+1-gram frequency of frequency : 237 
+2-gram frequency of frequency : 636 70 15 10 7 2 0 
+3-gram frequency of frequency : 830 51 10 6 5 1 0 
+1-gram discounting ratios : 0.00 
+2-gram discounting ratios : 0.21 0.31 0.89 0.87 0.33 
+3-gram discounting ratios : 0.10 0.27 0.79 
+This file is in the ARPA-standard format introduced by Doug Paul.
+
+p(wd3|wd1,wd2)= if(trigram exists)           p_3(wd1,wd2,wd3)
+                else if(bigram w1,w2 exists) bo_wt_2(w1,w2)*p(wd3|wd2)
+                else                         p(wd3|w2)
+
+p(wd2|wd1)= if(bigram exists) p_2(wd1,wd2)
+            else              bo_wt_1(wd1)*p_1(wd2)
+
+All probs and back-off weights (bo_wt) are given in log10 form.
+
+Data formats:
+
+Beginning of data mark: \data\
+ngram 1=nr            # number of 1-grams
+ngram 2=nr            # number of 2-grams
+ngram 3=nr            # number of 3-grams
+
+\1-grams:
+p_1     wd_1 bo_wt_1
+\2-grams:
+p_2     wd_1 wd_2 bo_wt_2
+\3-grams:
+p_3     wd_1 wd_2 wd_3 
+
+end of data mark: \end\
+
+\data\
+ngram 1=377
+ngram 2=742
+ngram 3=904
+
+\1-grams:
+-99.9990 0neke	-0.0959
+-99.9990 2016	-0.0997
+-0.8658 </s>	-1.9732
+-0.8618 <s>	-0.1594
+-2.5982 Asa	-0.1590
+-99.9990 Bole	-0.0986
+-99.9990 Currently	-0.0997
+-99.9990 Ei	-0.0997
+-99.9990 Exercise	-0.0997
+-99.9990 Gorom	-0.0997
+-99.9990 Joto	-0.0981
+-99.9990 Kharap	-0.0970
+-99.9990 Ora	-0.0997
+-99.9990 Vasrity_life_tour	-0.0361
+-99.9990 aar	-0.0970
+-2.5982 aat	-0.0997
+-2.5982 abar	-0.0959
+-99.9990 abr	-0.0997
+-2.5982 ac	-0.0947
+-99.9990 accident	-0.0997
+-99.9990 ache	-0.0361
+-2.5982 adda	-0.0997
+-99.9990 age	-0.0947
+-99.9990 agrohi	-0.0361
+-2.5982 ajk	-0.0986
+-2.1211 ajke	-0.1084
+-2.2003 amader	-0.0772
+-2.2972 amar	-0.0964
+-99.9990 amder	-0.0986
+-2.5982 america	-0.0959
+-1.7232 ami	-0.1885
+-2.5982 amr	-0.0914
+-2.1211 amra	-0.0982
+-99.9990 ar	-0.0997
+-2.4222 argentina	-0.0632
+-99.9990 aro	-0.0986
+-2.4222 ase	-0.0723
+-99.9990 assignment	-0.0997
+-99.9990 baby	-0.0997
+-99.9990 bad	-0.0981
+-99.9990 bagan	-0.0981
+-99.9990 bandarban	-0.0997
+-99.9990 bangladesh	-0.0807
+-2.5982 bar	-0.0801
+-99.9990 bare	-0.0997
+-99.9990 bash	-0.0975
+-2.5982 bashay	-0.0959
+-99.9990 bazar	-0.0953
+-99.9990 bela	-0.0970
+-2.5982 beshi	-0.0970
+-99.9990 bestotar	-0.0970
+-99.9990 bikal	-0.0807
+-99.9990 bikale	-0.0986
+-99.9990 bochor	-0.0997
+-99.9990 body	-0.0931
+-2.5982 bolbe	-0.0965
+-99.9990 bose	-0.0997
+-99.9990 boshe	-0.0970
+-99.9990 boshi	-0.0361
+-99.9990 brazil	-0.0830
+-99.9990 burger	-0.0997
+-2.5982 bus	-0.1411
+-99.9990 but	-0.0997
+-99.9990 calaya	-0.0970
+-99.9990 cha	-0.0997
+-99.9990 chaite	-0.0931
+-99.9990 char	-0.0986
+-99.9990 charte	-0.0947
+-99.9990 cheese	-0.0997
+-2.5982 chera	-0.1590
+-99.9990 chicken	-0.0997
+-99.9990 chilo	-0.0361
+-99.9990 chipay	-0.0986
+-99.9990 choli	-0.0361
+-99.9990 choto	-0.0997
+-99.9990 choy	-0.0981
+-1.9450 class	-0.0675
+-99.9990 cole	-0.0964
+-2.5982 copa	-0.1590
+-99.9990 cox	-0.0997
+-2.5982 cricket	-0.0964
+-99.9990 cul	-0.0997
+-99.9990 cup	-0.0981
+-99.9990 current	-0.0997
+-99.9990 cycle	-0.0997
+-99.9990 dei	-0.0947
+-99.9990 dekha	-0.0970
+-2.5982 dekhe	-0.0986
+-99.9990 dekhlam	-0.0361
+-99.9990 deoa	-0.0997
+-99.9990 der	-0.0997
+-99.9990 deri	-0.0947
+-99.9990 dewa	-0.0975
+-2.4222 dey	-0.8824
+-99.9990 dhaka	-0.0975
+-99.9990 dhakar	-0.0975
+-2.5982 dhanmondi	-0.1585
+-99.9990 digital	-0.0947
+-2.5982 dike	-0.0349
+-99.9990 dile	-0.0997
+-2.5982 din	-0.0931
+-2.5982 dip	-0.0661
+-99.9990 dite	-0.0997
+-99.9990 ditechi	-0.0361
+-2.4222 diye	-0.0858
+-2.5982 dom	-0.0323
+-99.9990 dorkar	-0.0361
+-99.9990 dos	-0.0997
+-99.9990 dosh	-0.0981
+-99.9990 dowrite	-0.0986
+-2.4222 dt5	-0.9292
+-2.4222 dui	-0.0970
+-99.9990 duibar	-0.0953
+-1.3678 e	-0.1256
+-99.9990 ebar	-0.0830
+-2.5982 ei	-0.0964
+-2.2972 ek	-0.1267
+-2.5982 ekhn	-0.0975
+-99.9990 ekhonoi	-0.0361
+-2.4222 ekta	-0.0959
+-2.5982 ekti	-0.1590
+-2.5982 ektu	-0.0997
+-99.9990 enjoy	-0.0964
+-1.4222 er	-0.1497
+-2.5982 eshe	-0.0997
+-99.9990 eto	-0.0997
+-99.9990 everyday	-0.0986
+-99.9990 exercise	-0.0986
+-99.9990 faltu	-0.0361
+-99.9990 fan	-0.0997
+-99.9990 fastfood	-0.0997
+-99.9990 felchi	-0.0361
+-99.9990 feli	-0.0361
+-99.9990 form	-0.0807
+-99.9990 ful	-0.0997
+-99.9990 gari	-0.0997
+-2.1211 gele	-0.0329
+-99.9990 gesilam	-0.0361
+-2.5982 ghonta	-0.0964
+-99.9990 ghore	-0.0997
+-2.5982 ghum	-0.1574
+-99.9990 ghumate	-0.0970
+-2.5982 ghurar	-0.0824
+-99.9990 ghurte	-0.0964
+-99.9990 giye	-0.0997
+-2.2972 gorom	-0.1087
+-99.9990 gosol	-0.0964
+-99.9990 gula	-0.0936
+-99.9990 gulo	-0.0975
+-2.5982 gulor	-0.0959
+-99.9990 hell	-0.0981
+-2.5982 hobe	-0.0965
+-2.4222 hocche	-0.1234
+-2.2972 hoi	-0.1105
+-99.9990 hoichilo	-0.0361
+-99.9990 hoile	-0.0361
+-99.9990 hole	-0.0997
+-2.5982 holo	-0.0997
+-1.9450 hoy	-0.0593
+-2.4222 hoye	-0.0931
+-99.9990 hoyeche	-0.0361
+-99.9990 iccha	-0.0953
+-99.9990 immature	-0.0997
+-99.9990 incubator	-0.0830
+-99.9990 inspire	-0.0953
+-2.5982 jabo	-0.0361
+-2.5982 jacche	-0.0965
+-99.9990 jacchi	-0.0361
+-2.5982 jaflong	-0.0766
+-2.2003 jai	-0.7815
+-2.5982 jaitam	-0.0965
+-2.0542 jam	-0.2965
+-99.9990 janjot	-0.0361
+-2.2003 jawa	-0.1385
+-99.9990 jawar	-0.0964
+-2.2003 jay	-0.3487
+-2.2003 jayga	-0.0972
+-2.4222 jete	-0.0975
+-99.9990 jeye	-0.0964
+-99.9990 jhamela	-0.0361
+-99.9990 jhornay	-0.0997
+-99.9990 jinis	-0.0986
+-2.1211 jonno	-0.0766
+-99.9990 joto	-0.0997
+-99.9990 kahini	-0.0975
+-2.2003 kaj	-0.0917
+-2.2003 karone	-0.0959
+-99.9990 ke	-0.0997
+-99.9990 khabar	-0.0936
+-99.9990 khaben	-0.0997
+-99.9990 khabo	-0.0361
+-2.5982 kharap	-0.0936
+-99.9990 khawa	-0.0986
+-2.5982 khela	-0.1590
+-2.2972 khelar	-0.1239
+-2.5982 kheli	-0.0965
+-99.9990 khete	-0.0997
+-1.8579 khub	-0.2597
+-99.9990 kintu	-0.0986
+-2.1211 kisu	-0.1319
+-99.9990 kn	-0.0986
+-99.9990 kom	-0.0997
+-99.9990 kono	-0.0970
+-2.5982 kora	-0.0947
+-2.5982 korar	-0.0981
+-2.5982 korchi	-0.0936
+-99.9990 korchilm	-0.0361
+-1.9962 kore	-0.1950
+-99.9990 korel	-0.0997
+-2.1211 kori	-0.8812
+-2.4222 korle	-0.1379
+-2.2972 korte	-0.0942
+-99.9990 kortese	-0.0997
+-99.9990 koshto	-0.0361
+-99.9990 kothao	-0.0997
+-2.1211 lage	-0.1001
+-99.9990 lagle	-0.0975
+-99.9990 laglo	-0.0361
+-2.4222 lake	-0.9269
+-99.9990 last	-0.0830
+-2.4222 life	-0.0632
+-2.5982 mach	-0.0858
+-2.2972 majhe	-0.8910
+-99.9990 mane	-0.0807
+-2.5982 manus	-0.0920
+-2.5982 manush	-0.0830
+-99.9990 marte	-0.0986
+-2.2972 mega	-0.8926
+-99.9990 mejas	-0.0986
+-99.9990 mene	-0.0997
+-99.9990 mero	-0.0997
+-99.9990 mes	-0.0997
+-99.9990 messi	-0.0970
+-99.9990 minit	-0.0830
+-2.0542 moddhe	-0.0835
+-2.1211 moja	-0.0464
+-2.4222 mon	-0.1324
+-99.9990 mone	-0.0947
+-99.9990 moto	-0.0975
+-1.8993 na	-0.3953
+-99.9990 nai	-0.0975
+-99.9990 nanan	-0.0997
+-99.9990 nirdeshona	-0.0997
+-99.9990 niye	-0.0970
+-2.5982 noshto	-0.0914
+-99.9990 nouka	-0.0959
+-2.2972 o	-0.0942
+-99.9990 office	-0.0807
+-99.9990 onake	-0.0959
+-1.5013 onek	-0.1046
+-99.9990 oneker	-0.0997
+-99.9990 oshustho	-0.0981
+-2.2972 pabgi	-0.5439
+-99.9990 pai	-0.0942
+-2.4222 pani	-0.0936
+-2.5982 panic	-0.0997
+-99.9990 paoa	-0.0970
+-99.9990 pare	-0.0942
+-2.4222 pc	-0.0970
+-99.9990 peke	-0.0986
+-99.9990 pera	-0.0981
+-99.9990 pichone	-0.0858
+-99.9990 podma	-0.0997
+-99.9990 pohate	-0.0981
+-2.4222 por	-0.0953
+-2.2003 pora	-0.1157
+-99.9990 porar	-0.0964
+-99.9990 porashuna	-0.0975
+-99.9990 pore	-0.0997
+-2.5982 pori	-0.0349
+-99.9990 poriskar	-0.0361
+-99.9990 porjapto	-0.0997
+-99.9990 porle	-0.0975
+-99.9990 porte	-0.0997
+-99.9990 posondo	-0.0964
+-99.9990 presentation	-0.0981
+-99.9990 pressure	-0.0970
+-99.9990 product	-0.0997
+-99.9990 proitdin	-0.0997
+-2.2972 project	-0.1256
+-99.9990 proti	-0.0997
+-2.1211 protidin	-0.0529
+-2.5982 quiz	-0.0830
+-2.5982 ra	-0.0795
+-99.9990 rabby	-0.0858
+-99.9990 rail	-0.0361
+-99.9990 rakha	-0.0964
+-99.9990 ram	-0.0936
+-2.2972 rastay	-0.0801
+-99.9990 rat	-0.0981
+-99.9990 ready	-0.0975
+-99.9990 rokom	-0.0986
+-99.9990 romantic	-0.0981
+-2.4222 room	-0.0824
+-99.9990 sadharon	-0.0986
+-99.9990 sainmartin	-0.0807
+-2.5982 saintmartin	-0.0784
+-99.9990 sajano	-0.0361
+-99.9990 sathe	-0.0858
+-99.9990 school	-0.0807
+-99.9990 se	-0.0986
+-99.9990 sell	-0.0997
+-2.5982 semester	-0.1434
+-2.4222 sesh	-0.0931
+-99.9990 seshe	-0.0986
+-99.9990 setu	-0.0361
+-99.9990 shal	-0.0807
+-99.9990 shamodrik	-0.0986
+-99.9990 shamudrik	-0.0986
+-99.9990 shei	-0.0986
+-2.5982 shes	-0.0830
+-99.9990 sheshe	-0.0986
+-99.9990 shodorghat	-0.0986
+-2.5982 shokal	-0.0997
+-2.5982 shomoy	-0.1590
+-99.9990 shoptahe	-0.0997
+-2.2972 shuru	-0.1211
+-99.9990 shymoly	-0.0997
+-2.2003 sir	-0.1078
+-99.9990 slow	-0.0970
+-2.2003 sob	-0.0852
+-99.9990 sobai	-0.0997
+-2.5982 sobar	-0.0807
+-2.5982 somossa	-0.0361
+-2.2972 somoy	-0.0596
+-99.9990 soril	-0.0981
+-99.9990 square	-0.0997
+-99.9990 sristi	-0.0981
+-99.9990 star	-0.0997
+-99.9990 subidha	-0.0997
+-99.9990 sujog	-0.0997
+-2.2003 sundor	-0.0239
+-99.9990 supporter	-0.0361
+-99.9990 sylhel	-0.0807
+-2.5982 sylhet	-0.0632
+-2.4222 ta	-0.0180
+-99.9990 tachara	-0.0959
+-99.9990 take	-0.0997
+-99.9990 talar	-0.0997
+-99.9990 tarikh	-0.0361
+-99.9990 tarpor	-0.0947
+-2.4222 tay	-0.1379
+-2.0542 te	-0.0931
+-99.9990 tech	-0.0830
+-99.9990 thakbe	-0.0361
+-2.2003 thake	-0.0908
+-99.9990 thaki	-0.0361
+-99.9990 thakle	-0.0858
+-99.9990 thanda	-0.0361
+-2.2003 theke	-0.0998
+-2.2003 thik	-0.4036
+-2.5982 time	-0.0981
+-99.9990 tin	-0.0986
+-99.9990 to	-0.0947
+-99.9990 toieri	-0.0975
+-99.9990 toiri	-0.0975
+-99.9990 tokhn	-0.0997
+-99.9990 tola	-0.0936
+-99.9990 toto	-0.0997
+-1.9962 tour	-0.6776
+-99.9990 tul	-0.0997
+-99.9990 tulbe	-0.0361
+-2.5982 utchit	-0.0965
+-2.5982 uthi	-0.0965
+-2.4222 vabe	-0.0723
+-99.9990 vabi	-0.0997
+-99.9990 vabtechi	-0.0361
+-1.8201 valo	-0.0485
+-1.8993 varsity	-0.2521
+-99.9990 venge	-0.0997
+-99.9990 voira	-0.0981
+-99.9990 vorti	-0.0975
+-99.9990 vromoner	-0.0964
+-99.9990 vs	-0.0997
+-2.5982 vul	-0.0975
+-99.9990 wash	-0.0981
+-2.5982 weather	-0.0790
+
+\2-grams:
+-0.6880 0neke jam 0.2556
+-0.6880 2016 shal 0.0555
+-0.0040 </s> <s> 0.0017
+-2.7254 <s> 0neke 0.0555
+-2.2473 <s> Asa 0.0216
+-2.7254 <s> Bole 0.0555
+-2.7254 <s> Currently 0.0555
+-2.7254 <s> Ei 0.0555
+-2.7254 <s> Exercise 0.0555
+-2.7254 <s> Gorom 0.0555
+-2.7254 <s> Joto 0.0555
+-2.7254 <s> Kharap 0.0555
+-2.7254 <s> Ora 0.0555
+-2.7254 <s> Vasrity_life_tour 0.0555
+-2.7254 <s> aat 0.0028
+-2.7254 <s> ac 0.0028
+-2.2473 <s> ajk 0.0555
+-1.2593 <s> ajke 0.0455
+-1.6125 <s> amader 0.0128
+-1.6125 <s> amar 0.0283
+-2.7254 <s> amder 0.0555
+-0.8913 <s> ami 0.0099
+-2.7254 <s> amr 0.0028
+-1.8197 <s> amra 0.0747
+-2.7254 <s> baby 0.0555
+-2.7254 <s> bangladesh 0.0555
+-2.2473 <s> chera 0.0216
+-2.7254 <s> class -0.0134
+-2.7254 <s> copa 0.1159
+-2.7254 <s> cox 0.0555
+-2.7254 <s> cricket 0.0028
+-2.7254 <s> current 0.0555
+-2.7254 <s> dhakar 0.0555
+-2.2473 <s> dt5 0.8074
+-2.7254 <s> dui -0.0134
+-2.7254 <s> ei 0.0028
+-2.2473 <s> ekhn 0.0555
+-2.2473 <s> gorom -0.0658
+-2.7254 <s> jaflong 0.0028
+-2.2473 <s> jam 0.1613
+-2.7254 <s> kintu 0.0555
+-2.2473 <s> kisu -0.0914
+-2.7254 <s> life -0.0134
+-2.2473 <s> majhe 0.7563
+-2.2473 <s> mega 0.7563
+-2.7254 <s> mes 0.0555
+-2.2473 <s> pabgi 0.3365
+-2.7254 <s> pc -0.0134
+-2.2473 <s> pora -0.0814
+-2.7254 <s> porashuna 0.0555
+-2.7254 <s> quiz 0.0028
+-2.7254 <s> sainmartin 0.0555
+-2.2473 <s> saintmartin 0.0555
+-2.7254 <s> se 0.0555
+-2.7254 <s> semester 0.1159
+-2.7254 <s> shamodrik 0.0555
+-2.7254 <s> sir 0.0130
+-2.7254 <s> star 0.0555
+-2.7254 <s> sylhel 0.0555
+-2.2473 <s> sylhet 0.0555
+-2.7254 <s> tachara 0.0555
+-2.7254 <s> tarpor 0.0555
+-1.6125 <s> tour -0.0842
+-2.7254 <s> valo -0.0367
+-1.8197 <s> varsity -0.0534
+-2.7254 <s> vul 0.0028
+-0.5109 Asa korchi 0.0555
+-0.6880 Bole ei 0.0028
+-0.6880 Currently messi 0.0555
+-0.6880 Ei rokom 0.0555
+-0.6880 Exercise korel 0.0555
+-0.6880 Gorom nai 0.0555
+-0.6880 Joto pani -0.0134
+-0.6880 Kharap kaj 0.0130
+-0.6880 Ora product 0.0555
+-0.6880 Vasrity_life_tour </s> 1.9932
+-0.6880 aar jawa 0.0130
+-0.9890 aat talar 0.0555
+-0.9890 aat tola 0.0555
+-0.9890 abar bus 0.1159
+-0.9890 abar pora -0.0260
+-0.6880 abr nouka 0.0555
+-0.9890 ac majhe 0.8506
+-0.9890 ac thik -0.0260
+-0.6880 accident dekhlam 0.0555
+-0.6880 ache </s> 1.9932
+-0.9890 adda dei 0.0555
+-0.9890 adda marte 0.0555
+-0.6880 age class -0.0342
+-0.6880 agrohi </s> 1.9932
+-0.9890 ajk bikal 0.0555
+-0.9890 ajk weather 0.0028
+-1.4661 ajke ami -0.0382
+-1.4661 ajke chicken 0.0555
+-1.4661 ajke dhaka 0.0555
+-0.9880 ajke rastay 0.0028
+-1.4661 ajke shymoly 0.0555
+-1.3869 amader onek -0.0406
+-1.3869 amader porjapto 0.0555
+-1.3869 amader sir 0.0130
+-1.3869 amader sobai 0.0555
+-1.3869 amader varsity -0.0352
+-1.2900 amar dos 0.0555
+-1.2900 amar jete -0.0134
+-1.2900 amar life -0.0134
+-1.2900 amar shoptahe 0.0555
+-0.6880 amder sobar 0.0028
+-0.9890 america cup 0.0555
+-0.9890 america te -0.0313
+-1.8641 ami 2016 0.0555
+-1.8641 ami choto 0.0555
+-1.8641 ami class -0.0342
+-1.8641 ami fastfood 0.0555
+-1.8641 ami kisu -0.0291
+-1.8641 ami proitdin 0.0555
+-0.6332 ami protidin 0.0197
+-1.8641 ami school 0.0555
+-1.8641 ami shodorghat 0.0555
+-1.8641 ami shokal 0.0028
+-1.8641 ami sir -0.0260
+-1.8641 ami varsity 0.0342
+-0.9890 amr gorom -0.0213
+-0.9890 amr khub 0.1216
+-1.4661 amra age 0.0555
+-1.4661 amra ek -0.0213
+-0.9880 amra onek -0.0107
+-1.4661 amra proti 0.0555
+-1.4661 amra tour -0.0329
+-0.6880 ar bestotar 0.0555
+-1.1651 argentina e -0.0416
+-1.1651 argentina er -0.0412
+-1.1651 argentina vs 0.0555
+-0.6880 aro ekti 0.1159
+-0.6870 ase </s> 1.8989
+-1.1651 ase sob -0.0260
+-0.6880 assignment presentation 0.0555
+-0.6880 baby immature 0.0555
+-0.6880 bad diye -0.0134
+-0.6880 bagan ase 0.0557
+-0.6880 bandarban vromoner 0.0555
+-0.6880 bangladesh e -0.0088
+-0.9890 bar onek -0.0145
+-0.9890 bar varsity 0.0342
+-0.6880 bare dewa 0.0555
+-0.6880 bash o -0.0213
+-0.9890 bashay eshe 0.0028
+-0.9890 bashay jai 0.8009
+-0.6880 bazar tour 0.5579
+-0.6880 bela theke -0.0260
+-0.9890 beshi beshi 0.0028
+-0.9890 beshi pani -0.0134
+-0.6880 bestotar karone -0.0260
+-0.6880 bikal e -0.0416
+-0.6880 bikale cricket 0.0028
+-0.6880 bochor duibar 0.0555
+-0.6880 body valo -0.0213
+-0.5109 bolbe </s> 1.8989
+-0.6880 bose thaki 0.0555
+-0.6880 boshe theke -0.0260
+-0.6880 boshi </s> 1.9932
+-0.6880 brazil er -0.0412
+-0.6880 burger khabo 0.0555
+-0.5109 bus e -0.0389
+-0.6880 but pore 0.0555
+-0.6880 calaya jawa 0.0130
+-0.6880 cha bagan 0.0555
+-0.6880 chaite valo -0.0213
+-0.6880 char din 0.0028
+-0.6880 charte hoy 0.0342
+-0.6880 cheese burger 0.0555
+-0.5109 chera dip 0.0555
+-0.6880 chicken cheese 0.0555
+-0.6880 chilo </s> 1.9932
+-0.6880 chipay adda 0.0028
+-0.6880 choli </s> 1.9932
+-0.6880 choto bela 0.0555
+-0.6880 choy tay 0.0557
+-1.6422 class e -0.0363
+-1.6422 class er -0.0412
+-1.1641 class korte 0.0028
+-1.6422 class room -0.0134
+-1.6422 class seshe 0.0555
+-1.6422 class shes 0.0028
+-1.6422 class sheshe 0.0555
+-1.6422 class thake 0.0956
+-0.6880 cole gele -0.0291
+-0.5109 copa america 0.0555
+-0.6880 cox bazar 0.0555
+-0.9890 cricket khelar 0.0285
+-0.9890 cricket kheli 0.1159
+-0.6880 cul tul 0.0555
+-0.6880 cup ta -0.0134
+-0.6880 current cole 0.0555
+-0.6880 cycle calaya 0.0555
+-0.6880 dei class -0.0342
+-0.6880 dekha jay 0.2856
+-0.9890 dekhe aar 0.0555
+-0.9890 dekhe abar 0.0028
+-0.6880 dekhlam </s> 1.9932
+-0.6880 deoa nirdeshona 0.0555
+-0.6880 der deoa 0.0555
+-0.6880 deri hoy 0.0342
+-0.6880 dewa shuru 0.0285
+-0.0522 dey </s> 1.3512
+-0.6880 dhaka rastay -0.0213
+-0.6880 dhakar rastay -0.0213
+-0.5109 dhanmondi lake 0.8074
+-0.6880 digital class -0.0342
+-0.9890 dike </s> 1.9932
+-0.9890 dike eshe 0.0028
+-0.6880 dile nanan 0.0555
+-0.9890 din class -0.0342
+-0.9890 din lake 0.9018
+-0.9890 dip e -0.0416
+-0.9890 dip onek -0.0334
+-0.6880 dite pare 0.0555
+-0.6880 ditechi </s> 1.9932
+-1.1651 diye ditechi 0.0555
+-1.1651 diye onek -0.0145
+-1.1651 diye voira 0.0555
+-0.9890 dom </s> 1.9932
+-0.9890 dom moja -0.0291
+-0.6880 dorkar </s> 1.9932
+-0.6880 dos minit 0.0555
+-0.6880 dosh tay 0.0557
+-0.6880 dowrite jaitam 0.1159
+-0.0522 dt5 er -0.0352
+-1.1651 dui ghonta 0.0028
+-1.1651 dui tarikh 0.0555
+-1.1651 dui tay -0.0134
+-0.6880 duibar tour 0.5579
+-2.2195 e adda 0.0028
+-2.2195 e argentina -0.0134
+-2.2195 e ase 0.0557
+-2.2195 e bashay 0.0028
+-2.2195 e cycle 0.0555
+-2.2195 e dekha 0.0555
+-2.2195 e dhanmondi 0.1159
+-2.2195 e dowrite 0.0555
+-2.2195 e everyday 0.0555
+-2.2195 e faltu 0.0555
+-1.1066 e gele 0.0028
+-2.2195 e ghore 0.0555
+-2.2195 e ghurar 0.0028
+-2.2195 e jabo 0.0028
+-2.2195 e jacchi 0.0555
+-1.7414 e jai 0.7066
+-2.2195 e jawar 0.0555
+-2.2195 e jete -0.0134
+-2.2195 e jeye 0.0555
+-2.2195 e jhamela 0.0555
+-2.2195 e kore -0.0329
+-2.2195 e mon -0.0134
+-1.1066 e onek -0.0334
+-1.7414 e tour 0.6049
+-1.7414 e valo 0.0029
+-2.2195 e varsity 0.0342
+-2.2195 e vul 0.0028
+-0.6880 ebar er -0.0412
+-0.9890 ei mega 0.8506
+-0.9890 ei somossa 0.0028
+-1.2900 ek bar 0.0028
+-1.2900 ek bare 0.0555
+-0.8119 ek dom 0.0555
+-0.9890 ekhn ar 0.0555
+-0.9890 ekhn somoy -0.0213
+-0.6880 ekhonoi </s> 1.9932
+-1.1651 ekta accident 0.0555
+-1.1651 ekta jayga 0.0956
+-1.1651 ekta khela 0.1159
+-0.5109 ekti holo 0.0555
+-0.9890 ektu exercise 0.0555
+-0.9890 ektu kom 0.0555
+-0.6880 enjoy kori -0.0313
+-2.1651 er aat 0.0028
+-2.1651 er ac 0.0028
+-2.1651 er beshi 0.0028
+-2.1651 er chipay 0.0555
+-2.1651 er copa 0.1159
+-2.1651 er digital 0.0555
+-1.6870 er dike 0.0555
+-2.1651 er jaflong 0.0028
+-2.1651 er jonno -0.0291
+-1.0522 er karone 0.0128
+-2.1651 er khela 0.1159
+-2.1651 er last 0.0555
+-1.0522 er moddhe -0.0042
+-2.1651 er moto 0.0555
+-2.1651 er onek -0.0334
+-2.1651 er pani -0.0134
+-2.1651 er pc -0.0134
+-1.6870 er pora -0.0070
+-2.1651 er ram 0.0555
+-2.1651 er shes 0.0028
+-1.6870 er sob -0.0070
+-2.1651 er somoy -0.0213
+-2.1651 er supporter 0.0555
+-0.9890 eshe joto 0.0555
+-0.9890 eshe porte 0.0555
+-0.6880 eto kn 0.0555
+-0.6880 everyday ektu 0.0028
+-0.6880 exercise kora 0.0028
+-0.6880 faltu </s> 1.9932
+-0.6880 fan charte 0.0555
+-0.6880 fastfood khabar 0.0555
+-0.6880 felchi </s> 1.9932
+-0.6880 feli </s> 1.9932
+-0.6880 form e -0.0416
+-0.6880 ful sell 0.0555
+-0.6880 gari niye 0.0555
+-1.4661 gele </s> 1.9932
+-1.4661 gele fan 0.0555
+-1.4661 gele gari 0.0555
+-1.4661 gele jhornay 0.0555
+-1.4661 gele mon 0.0557
+-1.4661 gele sobar 0.0028
+-0.6880 gesilam </s> 1.9932
+-0.9890 ghonta pabgi -0.0213
+-0.9890 ghonta time 0.0028
+-0.6880 ghore tulbe 0.0555
+-0.5109 ghum theke -0.0814
+-0.6880 ghumate jai 0.8009
+-0.9890 ghurar jonno -0.0291
+-0.9890 ghurar onek -0.0406
+-0.6880 ghurte gele -0.0291
+-0.6880 giye bose 0.0555
+-0.8119 gorom er -0.0006
+-1.2900 gorom lage 0.0726
+-1.2900 gorom lagle 0.0555
+-0.6880 gosol kori 0.8009
+-0.6880 gula khub -0.0360
+-0.6880 gulo mega 0.8506
+-0.9890 gulor ekti 0.1159
+-0.9890 gulor karone -0.0260
+-0.6880 hell hoye -0.0134
+-0.5109 hobe </s> 1.8989
+-1.1651 hocche dt5 0.9018
+-0.6870 hocche onek -0.0370
+-0.4812 hoi </s> 1.3385
+-0.6880 hoichilo </s> 1.9932
+-0.6880 hoile </s> 1.9932
+-0.6880 hole take 0.0555
+-0.9890 holo mero 0.0555
+-0.9890 holo podma 0.0555
+-0.7822 hoy </s> 1.3385
+-1.6880 hoy but 0.0555
+-1.2099 hoy na 0.2039
+-1.6880 hoy onek -0.0406
+-1.6880 hoy pc -0.0134
+-1.1651 hoye jacche 0.1159
+-1.1651 hoye jay -0.0260
+-1.1651 hoye thake 0.0956
+-0.6880 hoyeche </s> 1.9932
+-0.6880 iccha kore -0.0329
+-0.6880 immature hole 0.0555
+-0.6880 incubator er -0.0039
+-0.6880 inspire kore 0.1314
+-0.9890 jabo </s> 1.9932
+-0.9890 jabo vabtechi 0.0555
+-0.5109 jacche </s> 1.8989
+-0.6880 jacchi </s> 1.9932
+-0.9890 jaflong er -0.0412
+-0.9890 jaflong khub -0.0191
+-0.0669 jai </s> 1.2593
+-0.5109 jaitam </s> 1.8989
+-1.5331 jam </s> 1.9932
+-1.5331 jam chilo 0.0555
+-0.3022 jam er -0.3351
+-1.5331 jam protidin -0.0291
+-0.6880 janjot </s> 1.9932
+-0.9089 jawa hoy -0.1109
+-0.9089 jawa jay 0.3254
+-1.3869 jawa utchit 0.1159
+-0.6880 jawar jonno -0.0291
+-0.2740 jay </s> 1.3512
+-1.3869 jay abr 0.0555
+-1.3869 jay semester 0.1159
+-0.5604 jayga </s> 1.3385
+-1.4661 jayga ache 0.0555
+-1.1651 jete amar -0.0213
+-1.1651 jete deri 0.0555
+-1.1651 jete tin 0.0555
+-0.6880 jeye amra 0.0029
+-0.6880 jhamela </s> 1.9932
+-0.6880 jhornay gosol 0.0555
+-0.6880 jinis korar 0.0028
+-1.4661 jonno khub -0.0191
+-1.4661 jonno onek -0.0406
+-1.4661 jonno ready 0.0555
+-1.4661 jonno sob -0.0260
+-1.4661 jonno toieri 0.0555
+-1.4661 jonno toiri 0.0555
+-0.6880 joto pera 0.0555
+-0.6880 kahini shuru 0.0285
+-1.3869 kaj e -0.0363
+-1.3869 kaj kore -0.0329
+-0.9089 kaj korle -0.0386
+-1.3869 kaj na -0.0360
+-1.3869 karone jawa 0.0130
+-1.3869 karone manush 0.0028
+-1.3869 karone oneker 0.0555
+-1.3869 karone sadharon 0.0555
+-1.3869 karone sristi 0.0555
+-0.6880 ke pohate 0.0555
+-0.6880 khabar khub -0.0360
+-0.6880 khaben toto 0.0555
+-0.6880 khabo </s> 1.9932
+-0.9890 kharap bolbe 0.1159
+-0.9890 kharap hoy -0.0352
+-0.6880 khawa utchit 0.1159
+-0.5109 khela hobe 0.0216
+-1.2900 khelar jonno -0.0291
+-1.2900 khelar pichone 0.0555
+-0.8119 khelar por 0.0197
+-0.5109 kheli </s> 1.8989
+-0.6880 khete gesilam 0.0555
+-1.2513 khub e -0.0336
+-1.7294 khub poriskar 0.0555
+-1.7294 khub posondo 0.0555
+-1.7294 khub slow 0.0555
+-1.2513 khub sundor -0.0070
+-0.4985 khub valo 0.0028
+-0.6880 kintu panic 0.0028
+-1.4661 kisu bad 0.0555
+-1.4661 kisu din 0.0028
+-0.9880 kisu kisu -0.0914
+-0.9880 kisu sir -0.0070
+-0.6880 kn pori 0.0028
+-0.6880 kom porle 0.0555
+-0.6880 kono kaj -0.0260
+-0.9890 kora dorkar 0.0555
+-0.9890 kora hoy 0.0342
+-0.9890 korar iccha 0.0555
+-0.9890 korar por -0.0134
+-0.9890 korchi ebar 0.0555
+-0.9890 korchi khub 0.1216
+-0.6880 korchilm </s> 1.9932
+-0.4782 kore </s> 1.3512
+-1.5911 kore felchi 0.0555
+-1.5911 kore jai 0.8009
+-1.5911 kore na 0.2982
+-1.5911 kore rat 0.0555
+-1.5911 kore sajano 0.0555
+-0.6880 korel body 0.0555
+-0.0669 kori </s> 1.2593
+-1.5331 kori kothao 0.0555
+-0.6870 korle manus 0.0555
+-1.1651 korle mejas 0.0555
+-1.2900 korte amr 0.0028
+-1.2900 korte cul 0.0555
+-1.2900 korte ek 0.0285
+-1.2900 korte korte -0.0213
+-0.6880 kortese ekhonoi 0.0555
+-0.6880 koshto </s> 1.9932
+-0.6880 kothao ghurte 0.0555
+-0.6273 lage </s> 1.3385
+-1.0550 lage na 0.3554
+-0.6880 lagle majhe 0.8506
+-0.6880 laglo </s> 1.9932
+-0.0522 lake e -0.0363
+-0.6880 last er -0.0352
+-1.1651 life e -0.0363
+-1.1651 life er -0.0352
+-1.1651 life hell 0.0555
+-0.9890 mach onek -0.0145
+-0.9890 mach paoa 0.0555
+-0.0592 majhe moddhe 0.0099
+-0.6880 mane e -0.0416
+-0.9890 manus kharap 0.0028
+-0.9890 manus valo -0.0367
+-0.9890 manush er -0.0412
+-0.9890 manush ke 0.0555
+-0.6880 marte jaitam 0.1159
+-0.0592 mega project 0.0401
+-0.6880 mejas kharap 0.0028
+-0.6880 mene choli 0.0555
+-0.6880 mero rail 0.0555
+-0.6880 mes mane 0.0555
+-0.6880 messi sob -0.0260
+-0.6880 minit er -0.0412
+-1.5331 moddhe amader -0.0260
+-1.5331 moddhe boshe 0.0555
+-1.5331 moddhe class -0.0134
+-1.5331 moddhe rakha 0.0555
+-1.5331 moddhe thik -0.0260
+-1.5331 moddhe vabi 0.0555
+-1.5331 moddhe varsity 0.0342
+-0.9880 moja </s> 1.8989
+-1.4661 moja hoichilo 0.0555
+-1.4661 moja kora 0.0028
+-1.4661 moja kori 0.8009
+-1.4661 moja lage -0.0041
+-1.1651 mon romantic 0.0555
+-0.6870 mon valo -0.0134
+-0.6880 mone hoy -0.0352
+-0.6880 moto somoy -0.0213
+-0.2632 na </s> 1.2593
+-1.2513 na dekhe 0.0555
+-1.7294 na korle -0.0134
+-1.7294 na thakle 0.0555
+-1.7294 na thik 0.2856
+-0.6880 nai ek 0.0285
+-0.6880 nanan kahini 0.0555
+-0.6880 nirdeshona mene 0.0555
+-0.6880 niye jawa -0.0260
+-0.9890 noshto hoy 0.0342
+-0.9890 noshto kori 0.8009
+-0.6880 nouka te -0.0313
+-1.2900 o dey 0.9018
+-1.2900 o ghurar 0.0028
+-1.2900 o jawa 0.0130
+-1.2900 o to 0.0555
+-0.6880 office e -0.0416
+-0.6880 onake jam -0.0313
+-2.0859 onek agrohi 0.0555
+-2.0859 onek cha 0.0555
+-2.0859 onek enjoy 0.0555
+-2.0859 onek gorom -0.0213
+-2.0859 onek gulo 0.0555
+-2.0859 onek inspire 0.0555
+-2.0859 onek jam -0.0313
+-2.0859 onek janjot 0.0555
+-2.0859 onek jayga -0.0291
+-2.0859 onek koshto 0.0555
+-1.1802 onek moja 0.0203
+-2.0859 onek panic 0.0028
+-2.0859 onek pressure 0.0555
+-2.0859 onek shamudrik 0.0555
+-1.6078 onek shomoy 0.0216
+-1.6078 onek sundor -0.0070
+-2.0859 onek thanda 0.0555
+-2.0859 onek time 0.0028
+-2.0859 onek tokhn 0.0555
+-0.6880 oneker office 0.0555
+-0.6880 oshustho hoye -0.0134
+-0.1771 pabgi khelar 0.0847
+-1.2900 pabgi kheli 0.1159
+-0.6880 pai na -0.0191
+-1.1651 pani khaben 0.0555
+-1.1651 pani khawa 0.0555
+-1.1651 pani khub -0.0360
+-0.9890 panic kortese 0.0555
+-0.9890 panic rabby 0.0555
+-0.6880 paoa jay 0.2856
+-0.6880 pare na -0.0360
+-1.1651 pc gula 0.0555
+-1.1651 pc thik 0.2856
+-1.1651 pc venge 0.0555
+-0.6880 peke jacche 0.1159
+-0.6880 pera ase -0.0134
+-0.6880 pichone onek -0.0334
+-0.6880 podma setu 0.0555
+-0.6880 pohate hocche 0.0557
+-1.1651 por bashay 0.0028
+-1.1651 por pabgi 0.4308
+-1.1651 por quiz 0.0028
+-1.3869 pora porar 0.0555
+-1.3869 pora protidin -0.0291
+-0.9089 pora sesh 0.0197
+-1.3869 pora shuru -0.0213
+-0.6880 porar jonno -0.0291
+-0.6880 porashuna korte -0.0213
+-0.6880 pore kono 0.0555
+-0.9890 pori </s> 1.9932
+-0.9890 pori ektu 0.0028
+-0.6880 poriskar </s> 1.9932
+-0.6880 porjapto sujog 0.0555
+-0.6880 porle o -0.0213
+-0.6880 porte boshi 0.0555
+-0.6880 posondo kori 0.8009
+-0.6880 presentation diye -0.0134
+-0.6880 pressure thake 0.0956
+-0.6880 product dile 0.0555
+-0.6880 proitdin bikale 0.0555
+-1.2900 project aro 0.0555
+-0.8119 project gulor 0.0555
+-1.2900 project shuru -0.0213
+-0.6880 proti bochor 0.0555
+-1.4661 protidin class -0.0342
+-1.4661 protidin dui -0.0134
+-1.4661 protidin e -0.0416
+-1.4661 protidin er -0.0352
+-1.4661 protidin sesh -0.0134
+-1.4661 protidin shokal 0.0028
+-0.9890 quiz assignment 0.0555
+-0.9890 quiz er -0.0352
+-0.9890 ra khub 0.1216
+-0.9890 ra onek -0.0406
+-0.6880 rabby onek -0.0406
+-0.6880 rail </s> 1.9932
+-0.6880 rakha lage 0.0726
+-0.6880 ram khub -0.0191
+-1.2900 rastay ekta -0.0134
+-1.2900 rastay jam -0.0313
+-1.2900 rastay onake 0.0555
+-1.2900 rastay onek -0.0406
+-0.6880 rat dui -0.0134
+-0.6880 ready hoi 0.1299
+-0.6880 rokom weather 0.0028
+-0.6880 romantic hoye -0.0134
+-1.1651 room hocche -0.0134
+-1.1651 room onek -0.0334
+-1.1651 room ta -0.0134
+-0.6880 sadharon manush 0.0028
+-0.6880 sainmartin e -0.0416
+-0.9890 saintmartin e -0.0088
+-0.9890 saintmartin o -0.0213
+-0.6880 sajano </s> 1.9932
+-0.6880 sathe onek -0.0145
+-0.6880 school e -0.0416
+-0.6880 se bar 0.0028
+-0.6880 sell korchilm 0.0555
+-0.5109 semester er -0.0382
+-1.1651 sesh korar 0.0028
+-1.1651 sesh kore -0.0329
+-1.1651 sesh pori 0.0028
+-0.6880 seshe abar 0.0028
+-0.6880 setu </s> 1.9932
+-0.6880 shal e -0.0416
+-0.6880 shamodrik mach 0.0028
+-0.6880 shamudrik mach 0.0028
+-0.6880 shei somossa 0.0028
+-0.9890 shes er -0.0352
+-0.9890 shes hoile 0.0555
+-0.6880 sheshe dhanmondi 0.1159
+-0.6880 shodorghat jabo 0.0028
+-0.9890 shokal choy 0.0555
+-0.9890 shokal dosh 0.0555
+-0.5109 shomoy noshto 0.0555
+-0.6880 shoptahe char 0.0555
+-1.2900 shuru hoyeche 0.0555
+-0.8119 shuru kore 0.0370
+-1.2900 shuru kori 0.8009
+-0.6880 shymoly square 0.0555
+-1.3869 sir bash 0.0555
+-1.3869 sir der 0.0555
+-1.3869 sir onek -0.0406
+-0.9089 sir ra 0.0555
+-0.6880 slow thik 0.2856
+-1.3869 sob chaite 0.0555
+-1.3869 sob ek -0.0213
+-1.3869 sob khub 0.1216
+-1.3869 sob kisu -0.0291
+-1.3869 sob theke -0.0260
+-0.6880 sobai bandarban 0.0555
+-0.9890 sobar e -0.0416
+-0.9890 sobar sathe 0.0555
+-0.9890 somossa </s> 1.9932
+-0.9890 somossa shei 0.0555
+-1.2900 somoy e -0.0416
+-1.2900 somoy er -0.0412
+-1.2900 somoy lage 0.0726
+-1.2900 somoy pai 0.0555
+-0.6880 soril mon 0.0557
+-0.6880 square khete 0.0555
+-0.6880 sristi hocche 0.0557
+-0.6880 star tech 0.0555
+-0.6880 subidha dite 0.0555
+-0.6880 sujog subidha 0.0555
+-1.3869 sundor </s> 1.9932
+-1.3869 sundor ekta -0.0134
+-1.3869 sundor jayga 0.0956
+-1.3869 sundor kore -0.0329
+-1.3869 sundor room -0.0134
+-0.6880 supporter </s> 1.9932
+-0.6880 sylhel e -0.0363
+-0.9890 sylhet e -0.0088
+-0.9890 sylhet er -0.0412
+-1.1651 ta </s> 1.9932
+-1.1651 ta argentina -0.0134
+-1.1651 ta onek -0.0406
+-0.6880 tachara jam 0.2556
+-0.6880 take incubator 0.0555
+-0.6880 talar wash 0.0555
+-0.6880 tarikh </s> 1.9932
+-0.6880 tarpor class -0.0342
+-0.6870 tay ghum 0.0216
+-1.1651 tay ghumate 0.0555
+-1.5331 te argentina -0.0134
+-1.5331 te bus 0.1159
+-1.5331 te ful 0.0555
+-1.5331 te giye 0.0555
+-1.5331 te jete -0.0134
+-1.5331 te o -0.0213
+-1.5331 te vorti 0.0555
+-0.6880 tech er -0.0412
+-0.6880 thakbe </s> 1.9932
+-0.5604 thake </s> 1.3385
+-1.4661 thake na 0.2982
+-0.6880 thaki </s> 1.9932
+-0.6880 thakle onek -0.0406
+-0.6880 thanda </s> 1.9932
+-1.3869 theke e -0.0416
+-1.3869 theke oshustho 0.0555
+-1.3869 theke sundor -0.0260
+-0.9089 theke uthi 0.0216
+-1.3869 thik na -0.0360
+-1.3869 thik thake -0.0291
+-0.2740 thik vabe 0.0343
+-0.9890 time dey 0.9018
+-0.9890 time laglo 0.0555
+-0.6880 tin ghonta 0.0028
+-0.6880 to hoy -0.0352
+-0.6880 toieri hoi 0.1299
+-0.6880 toiri hoi 0.1299
+-0.6880 tokhn mone 0.0555
+-0.6880 tola khub -0.0191
+-0.6880 toto soril 0.0555
+-1.5911 tour diye -0.0134
+-0.1249 tour e -0.2062
+-1.5911 tour gele -0.0291
+-0.6880 tul peke 0.0555
+-0.6880 tulbe </s> 1.9932
+-0.5109 utchit </s> 1.8989
+-0.5109 uthi </s> 1.8989
+-1.1651 vabe </s> 1.9932
+-0.6870 vabe kaj -0.0070
+-0.6880 vabi eto 0.0555
+-0.6880 vabtechi </s> 1.9932
+-1.7672 valo </s> 1.9932
+-1.7672 valo bolbe 0.1159
+-1.7672 valo ekta -0.0134
+-1.7672 valo form 0.0555
+-1.2891 valo jayga 0.0012
+-1.7672 valo kaj 0.0130
+-1.2891 valo lage 0.1258
+-1.7672 valo thakbe 0.0555
+-1.2891 valo thake 0.0012
+-1.6880 varsity amader -0.0260
+-0.5751 varsity er -0.0291
+-1.6880 varsity life -0.0134
+-0.7822 varsity te 0.0246
+-0.6880 venge feli 0.0555
+-0.6880 voira dey 0.9018
+-0.6880 vorti hoi 0.1299
+-0.6880 vromoner jonno -0.0291
+-0.6880 vs brazil 0.0555
+-0.9890 vul jinis 0.0555
+-0.9890 vul somoy -0.0213
+-0.6880 wash room -0.0134
+-0.9890 weather e -0.0416
+-0.9890 weather ta -0.0134
+
+\3-grams:
+-1.0142 0neke jam er 
+-1.0142 2016 shal e 
+-3.0477 </s> <s> 0neke 
+-2.2961 </s> <s> Asa 
+-3.0477 </s> <s> Bole 
+-3.0477 </s> <s> Currently 
+-3.0477 </s> <s> Ei 
+-3.0477 </s> <s> Exercise 
+-3.0477 </s> <s> Gorom 
+-3.0477 </s> <s> Joto 
+-3.0477 </s> <s> Kharap 
+-3.0477 </s> <s> Ora 
+-3.0477 </s> <s> Vasrity_life_tour 
+-3.0477 </s> <s> aat 
+-3.0477 </s> <s> ac 
+-2.2961 </s> <s> ajk 
+-1.2553 </s> <s> ajke 
+-1.6565 </s> <s> amader 
+-1.6565 </s> <s> amar 
+-3.0477 </s> <s> amder 
+-0.9195 </s> <s> ami 
+-3.0477 </s> <s> amr 
+-1.3345 </s> <s> amra 
+-3.0477 </s> <s> baby 
+-3.0477 </s> <s> bangladesh 
+-2.2961 </s> <s> chera 
+-3.0477 </s> <s> class 
+-3.0477 </s> <s> copa 
+-3.0477 </s> <s> cox 
+-3.0477 </s> <s> cricket 
+-3.0477 </s> <s> current 
+-3.0477 </s> <s> dhakar 
+-2.2961 </s> <s> dt5 
+-3.0477 </s> <s> dui 
+-3.0477 </s> <s> ei 
+-2.2961 </s> <s> ekhn 
+-2.2961 </s> <s> gorom 
+-3.0477 </s> <s> jaflong 
+-2.2961 </s> <s> jam 
+-3.0477 </s> <s> kintu 
+-2.2961 </s> <s> kisu 
+-3.0477 </s> <s> life 
+-2.2961 </s> <s> majhe 
+-2.2961 </s> <s> mega 
+-3.0477 </s> <s> mes 
+-2.2961 </s> <s> pabgi 
+-3.0477 </s> <s> pc 
+-2.2961 </s> <s> pora 
+-3.0477 </s> <s> porashuna 
+-3.0477 </s> <s> quiz 
+-3.0477 </s> <s> sainmartin 
+-2.2961 </s> <s> saintmartin 
+-3.0477 </s> <s> se 
+-3.0477 </s> <s> semester 
+-3.0477 </s> <s> shamodrik 
+-3.0477 </s> <s> sir 
+-3.0477 </s> <s> star 
+-3.0477 </s> <s> sylhel 
+-2.2961 </s> <s> sylhet 
+-3.0477 </s> <s> tachara 
+-3.0477 </s> <s> tarpor 
+-1.6565 </s> <s> tour 
+-3.0477 </s> <s> valo 
+-1.3345 </s> <s> varsity 
+-3.0477 </s> <s> vul 
+-1.0142 <s> 0neke jam 
+-0.5637 <s> Asa korchi 
+-1.0142 <s> Bole ei 
+-1.0142 <s> Currently messi 
+-1.0142 <s> Ei rokom 
+-1.0142 <s> Exercise korel 
+-1.0142 <s> Gorom nai 
+-1.0142 <s> Joto pani 
+-1.0142 <s> Kharap kaj 
+-1.0142 <s> Ora product 
+-1.0142 <s> Vasrity_life_tour </s> 
+-1.0142 <s> aat talar 
+-1.0142 <s> ac thik 
+-1.3153 <s> ajk bikal 
+-1.3153 <s> ajk weather 
+-1.7924 <s> ajke ami 
+-1.7924 <s> ajke chicken 
+-1.7924 <s> ajke dhaka 
+-1.0408 <s> ajke rastay 
+-1.7924 <s> ajke shymoly 
+-1.4914 <s> amader sir 
+-1.4914 <s> amader sobai 
+-1.4914 <s> amader varsity 
+-1.4914 <s> amar jete 
+-1.4914 <s> amar life 
+-1.4914 <s> amar shoptahe 
+-1.0142 <s> amder sobar 
+-2.1604 <s> ami 2016 
+-2.1604 <s> ami choto 
+-2.1604 <s> ami class 
+-2.1604 <s> ami fastfood 
+-2.1604 <s> ami kisu 
+-2.1604 <s> ami proitdin 
+-0.5441 <s> ami protidin 
+-2.1604 <s> ami school 
+-2.1604 <s> ami shokal 
+-2.1604 <s> ami sir 
+-2.1604 <s> ami varsity 
+-1.0142 <s> amr gorom 
+-1.7132 <s> amra age 
+-1.7132 <s> amra ek 
+-1.7132 <s> amra onek 
+-1.7132 <s> amra proti 
+-1.7132 <s> amra tour 
+-1.0142 <s> baby immature 
+-1.0142 <s> bangladesh e 
+-0.5637 <s> chera dip 
+-1.0142 <s> class korte 
+-1.0142 <s> copa america 
+-1.0142 <s> cox bazar 
+-1.0142 <s> cricket khelar 
+-1.0142 <s> current cole 
+-1.0142 <s> dhakar rastay 
+-0.5637 <s> dt5 er 
+-1.0142 <s> dui tarikh 
+-1.0142 <s> ei mega 
+-1.3153 <s> ekhn ar 
+-1.3153 <s> ekhn somoy 
+-0.5637 <s> gorom er 
+-1.0142 <s> jaflong er 
+-0.5637 <s> jam er 
+-1.0142 <s> kintu panic 
+-0.5637 <s> kisu kisu 
+-1.0142 <s> life hell 
+-0.5637 <s> majhe moddhe 
+-0.5637 <s> mega project 
+-1.0142 <s> mes mane 
+-0.5637 <s> pabgi khelar 
+-1.0142 <s> pc thik 
+-0.5637 <s> pora sesh 
+-1.0142 <s> porashuna korte 
+-1.0142 <s> quiz assignment 
+-1.0142 <s> sainmartin e 
+-1.3153 <s> saintmartin e 
+-1.3153 <s> saintmartin o 
+-1.0142 <s> se bar 
+-1.0142 <s> semester er 
+-1.0142 <s> shamodrik mach 
+-1.0142 <s> sir ra 
+-1.0142 <s> star tech 
+-1.0142 <s> sylhel e 
+-1.3153 <s> sylhet e 
+-1.3153 <s> sylhet er 
+-1.0142 <s> tachara jam 
+-1.0142 <s> tarpor class 
+-0.1002 <s> tour e 
+-1.0142 <s> valo kaj 
+-0.3220 <s> varsity er 
+-1.7132 <s> varsity life 
+-1.7132 <s> varsity te 
+-1.0142 <s> vul somoy 
+-1.3153 Asa korchi ebar 
+-1.3153 Asa korchi khub 
+-1.0142 Bole ei somossa 
+-1.0142 Currently messi sob 
+-1.0142 Ei rokom weather 
+-1.0142 Exercise korel body 
+-1.0142 Gorom nai ek 
+-1.0142 Joto pani khaben 
+-1.0142 Kharap kaj korle 
+-1.0142 Ora product dile 
+-1.0142 Vasrity_life_tour </s> <s> 
+-1.0142 aar jawa hoy 
+-1.0142 aat talar wash 
+-1.0142 aat tola khub 
+-1.0142 abar bus e 
+-1.0142 abar pora shuru 
+-1.0142 abr nouka te 
+-1.0142 ac majhe moddhe 
+-1.0142 ac thik na 
+-1.0142 accident dekhlam </s> 
+-1.0142 ache </s> <s> 
+-1.0142 adda dei class 
+-1.0142 adda marte jaitam 
+-1.0142 age class sheshe 
+-1.0142 agrohi </s> <s> 
+-1.0142 ajk bikal e 
+-1.0142 ajk weather ta 
+-1.0142 ajke ami shodorghat 
+-1.0142 ajke chicken cheese 
+-1.0142 ajke dhaka rastay 
+-1.3153 ajke rastay ekta 
+-1.3153 ajke rastay onek 
+-1.0142 ajke shymoly square 
+-1.0142 amader onek pressure 
+-1.0142 amader porjapto sujog 
+-1.0142 amader sir ra 
+-1.0142 amader sobai bandarban 
+-1.0142 amader varsity amader 
+-1.0142 amar dos minit 
+-1.0142 amar jete tin 
+-1.0142 amar life er 
+-1.0142 amar shoptahe char 
+-1.0142 amder sobar e 
+-1.0142 america cup ta 
+-1.0142 america te argentina 
+-1.0142 ami 2016 shal 
+-1.0142 ami choto bela 
+-1.0142 ami class seshe 
+-1.0142 ami fastfood khabar 
+-1.0142 ami kisu din 
+-1.0142 ami proitdin bikale 
+-1.6163 ami protidin class 
+-1.6163 ami protidin dui 
+-1.6163 ami protidin er 
+-1.6163 ami protidin shokal 
+-1.0142 ami school e 
+-1.0142 ami shodorghat jabo 
+-1.0142 ami shokal dosh 
+-1.0142 ami sir der 
+-1.0142 ami varsity te 
+-1.0142 amr gorom lagle 
+-1.0142 amr khub valo 
+-1.0142 amra age class 
+-1.0142 amra ek bar 
+-1.3153 amra onek enjoy 
+-1.3153 amra onek moja 
+-1.0142 amra proti bochor 
+-1.0142 amra tour gele 
+-1.0142 ar bestotar karone 
+-1.0142 argentina e ghore 
+-1.0142 argentina er supporter 
+-1.0142 argentina vs brazil 
+-1.0142 aro ekti holo 
+-0.5637 ase </s> <s> 
+-1.0142 ase sob ek 
+-1.0142 assignment presentation diye 
+-1.0142 baby immature hole 
+-1.0142 bad diye ditechi 
+-1.0142 bagan ase </s> 
+-1.0142 bandarban vromoner jonno 
+-1.0142 bangladesh e onek 
+-1.0142 bar onek moja 
+-1.0142 bar varsity te 
+-1.0142 bare dewa shuru 
+-1.0142 bash o dey 
+-1.0142 bashay eshe porte 
+-1.0142 bashay jai </s> 
+-1.0142 bazar tour e 
+-1.0142 bela theke e 
+-1.0142 beshi beshi pani 
+-1.0142 beshi pani khawa 
+-1.0142 bestotar karone jawa 
+-1.0142 bikal e dhanmondi 
+-1.0142 bikale cricket kheli 
+-1.0142 bochor duibar tour 
+-1.0142 body valo thake 
+-0.5637 bolbe </s> <s> 
+-1.0142 bose thaki </s> 
+-1.0142 boshe theke oshustho 
+-1.0142 boshi </s> <s> 
+-1.0142 brazil er khela 
+-1.0142 burger khabo </s> 
+-1.3153 bus e bashay 
+-1.3153 bus e kore 
+-1.0142 but pore kono 
+-1.0142 calaya jawa jay 
+-1.0142 cha bagan ase 
+-1.0142 chaite valo jayga 
+-1.0142 char din class 
+-1.0142 charte hoy </s> 
+-1.0142 cheese burger khabo 
+-1.3153 chera dip e 
+-1.3153 chera dip onek 
+-1.0142 chicken cheese burger 
+-1.0142 chilo </s> <s> 
+-1.0142 chipay adda dei 
+-1.0142 choli </s> <s> 
+-1.0142 choto bela theke 
+-1.0142 choy tay ghum 
+-1.0142 class e jai 
+-1.0142 class er jonno 
+-1.3153 class korte amr 
+-1.3153 class korte ek 
+-1.0142 class room ta 
+-1.0142 class seshe abar 
+-1.0142 class shes hoile 
+-1.0142 class sheshe dhanmondi 
+-1.0142 class thake </s> 
+-1.0142 cole gele fan 
+-1.3153 copa america cup 
+-1.3153 copa america te 
+-1.0142 cox bazar tour 
+-1.0142 cricket khelar por 
+-1.0142 cricket kheli </s> 
+-1.0142 cul tul peke 
+-1.0142 cup ta argentina 
+-1.0142 current cole gele 
+-1.0142 cycle calaya jawa 
+-1.0142 dei class shes 
+-1.0142 dekha jay </s> 
+-1.0142 dekhe aar jawa 
+-1.0142 dekhe abar pora 
+-1.0142 dekhlam </s> <s> 
+-1.0142 deoa nirdeshona mene 
+-1.0142 der deoa nirdeshona 
+-1.0142 deri hoy </s> 
+-1.0142 dewa shuru kore 
+-0.1002 dey </s> <s> 
+-1.0142 dhaka rastay onake 
+-1.0142 dhakar rastay jam 
+-0.5637 dhanmondi lake e 
+-1.0142 digital class room 
+-1.0142 dike </s> <s> 
+-1.0142 dike eshe joto 
+-1.0142 dile nanan kahini 
+-1.0142 din class thake 
+-1.0142 din lake e 
+-1.0142 dip e cycle 
+-1.0142 dip onek sundor 
+-1.0142 dite pare na 
+-1.0142 ditechi </s> <s> 
+-1.0142 diye ditechi </s> 
+-1.0142 diye onek moja 
+-1.0142 diye voira dey 
+-1.0142 dom </s> <s> 
+-1.0142 dom moja lage 
+-1.0142 dorkar </s> <s> 
+-1.0142 dos minit er 
+-1.0142 dosh tay ghum 
+-1.0142 dowrite jaitam </s> 
+-1.4914 dt5 er aat 
+-1.4914 dt5 er chipay 
+-1.4914 dt5 er digital 
+-1.0142 dui ghonta pabgi 
+-1.0142 dui tarikh </s> 
+-1.0142 dui tay ghumate 
+-1.0142 duibar tour e 
+-1.0142 e adda marte 
+-1.0142 e argentina er 
+-1.0142 e ase </s> 
+-1.0142 e bashay jai 
+-1.0142 e cycle calaya 
+-1.0142 e dekha jay 
+-1.0142 e dhanmondi lake 
+-1.0142 e dowrite jaitam 
+-1.0142 e everyday ektu 
+-1.0142 e faltu </s> 
+-1.4914 e gele gari 
+-1.4914 e gele mon 
+-1.4914 e gele sobar 
+-1.0142 e ghore tulbe 
+-1.0142 e ghurar onek 
+-1.0142 e jabo vabtechi 
+-1.0142 e jacchi </s> 
+-0.5637 e jai </s> 
+-1.0142 e jawar jonno 
+-1.0142 e jete deri 
+-1.0142 e jeye amra 
+-1.0142 e jhamela </s> 
+-1.0142 e kore jai 
+-1.0142 e mon romantic 
+-1.4914 e onek cha 
+-1.4914 e onek gulo 
+-1.4914 e onek shamudrik 
+-1.3153 e tour diye 
+-1.3153 e tour e 
+-1.3153 e valo jayga 
+-1.3153 e valo lage 
+-1.0142 e varsity te 
+-1.0142 e vul jinis 
+-1.0142 ebar er copa 
+-1.0142 ei mega project 
+-1.0142 ei somossa shei 
+-1.0142 ek bar varsity 
+-1.0142 ek bare dewa 
+-1.3153 ek dom </s> 
+-1.3153 ek dom moja 
+-1.0142 ekhn ar bestotar 
+-1.0142 ekhn somoy pai 
+-1.0142 ekhonoi </s> <s> 
+-1.0142 ekta accident dekhlam 
+-1.0142 ekta jayga </s> 
+-1.0142 ekta khela hobe 
+-1.3153 ekti holo mero 
+-1.3153 ekti holo podma 
+-1.0142 ektu exercise kora 
+-1.0142 ektu kom porle 
+-1.0142 enjoy kori kothao 
+-1.0142 er aat tola 
+-1.0142 er ac majhe 
+-1.0142 er beshi beshi 
+-1.0142 er chipay adda 
+-1.0142 er copa america 
+-1.0142 er digital class 
+-1.3153 er dike </s> 
+-1.3153 er dike eshe 
+-1.0142 er jaflong khub 
+-1.0142 er jonno ready 
+-1.4914 er karone manush 
+-1.4914 er karone oneker 
+-1.4914 er karone sadharon 
+-1.0142 er khela hobe 
+-1.0142 er last er 
+-1.4914 er moddhe boshe 
+-1.4914 er moddhe class 
+-1.4914 er moddhe rakha 
+-1.0142 er moto somoy 
+-1.0142 er onek shomoy 
+-1.0142 er pani khub 
+-1.0142 er pc gula 
+-1.3153 er pora porar 
+-1.3153 er pora protidin 
+-1.0142 er ram khub 
+-1.0142 er shes er 
+-1.3153 er sob kisu 
+-1.3153 er sob theke 
+-1.0142 er somoy er 
+-1.0142 er supporter </s> 
+-1.0142 eshe joto pera 
+-1.0142 eshe porte boshi 
+-1.0142 eto kn pori 
+-1.0142 everyday ektu exercise 
+-1.0142 exercise kora dorkar 
+-1.0142 faltu </s> <s> 
+-1.0142 fan charte hoy 
+-1.0142 fastfood khabar khub 
+-1.0142 felchi </s> <s> 
+-1.0142 feli </s> <s> 
+-1.0142 form e ase 
+-1.0142 ful sell korchilm 
+-1.0142 gari niye jawa 
+-1.0142 gele </s> <s> 
+-1.0142 gele fan charte 
+-1.0142 gele gari niye 
+-1.0142 gele jhornay gosol 
+-1.0142 gele mon valo 
+-1.0142 gele sobar sathe 
+-1.0142 gesilam </s> <s> 
+-1.0142 ghonta pabgi kheli 
+-1.0142 ghonta time laglo 
+-1.0142 ghore tulbe </s> 
+-0.5637 ghum theke uthi 
+-1.0142 ghumate jai </s> 
+-1.0142 ghurar jonno sob 
+-1.0142 ghurar onek jayga 
+-1.0142 ghurte gele </s> 
+-1.0142 giye bose thaki 
+-1.3153 gorom er moddhe 
+-1.3153 gorom er somoy 
+-1.0142 gorom lage </s> 
+-1.0142 gorom lagle majhe 
+-1.0142 gosol kori </s> 
+-1.0142 gula khub slow 
+-1.0142 gulo mega project 
+-1.0142 gulor ekti holo 
+-1.0142 gulor karone sristi 
+-1.0142 hell hoye jay 
+-0.5637 hobe </s> <s> 
+-1.0142 hocche dt5 er 
+-1.3153 hocche onek janjot 
+-1.3153 hocche onek koshto 
+-0.0969 hoi </s> <s> 
+-1.0142 hoichilo </s> <s> 
+-1.0142 hoile </s> <s> 
+-1.0142 hole take incubator 
+-1.0142 holo mero rail 
+-1.0142 holo podma setu 
+-0.0969 hoy </s> <s> 
+-1.0142 hoy but pore 
+-0.5637 hoy na </s> 
+-1.0142 hoy onek tokhn 
+-1.0142 hoy pc venge 
+-1.0142 hoye jacche </s> 
+-1.0142 hoye jay semester 
+-1.0142 hoye thake </s> 
+-1.0142 hoyeche </s> <s> 
+-1.0142 iccha kore felchi 
+-1.0142 immature hole take 
+-1.0142 incubator er moddhe 
+-1.0142 inspire kore </s> 
+-1.0142 jabo </s> <s> 
+-1.0142 jabo vabtechi </s> 
+-0.5637 jacche </s> <s> 
+-1.0142 jacchi </s> <s> 
+-1.0142 jaflong er pani 
+-1.0142 jaflong khub sundor 
+-0.0792 jai </s> <s> 
+-0.5637 jaitam </s> <s> 
+-1.0142 jam </s> <s> 
+-1.0142 jam chilo </s> 
+-0.2251 jam er karone 
+-1.6163 jam er moddhe 
+-1.0142 jam protidin e 
+-1.0142 janjot </s> <s> 
+-0.5637 jawa hoy na 
+-1.3153 jawa jay </s> 
+-1.3153 jawa jay abr 
+-1.0142 jawa utchit </s> 
+-1.0142 jawar jonno khub 
+-0.1002 jay </s> <s> 
+-1.0142 jay abr nouka 
+-1.0142 jay semester er 
+-0.0969 jayga </s> <s> 
+-1.0142 jayga ache </s> 
+-1.0142 jete amar dos 
+-1.0142 jete deri hoy 
+-1.0142 jete tin ghonta 
+-1.0142 jeye amra onek 
+-1.0142 jhamela </s> <s> 
+-1.0142 jhornay gosol kori 
+-1.0142 jinis korar iccha 
+-1.0142 jonno khub e 
+-1.0142 jonno onek agrohi 
+-1.0142 jonno ready hoi 
+-1.0142 jonno sob chaite 
+-1.0142 jonno toieri hoi 
+-1.0142 jonno toiri hoi 
+-1.0142 joto pera ase 
+-1.0142 kahini shuru kore 
+-1.0142 kaj e valo 
+-1.0142 kaj kore na 
+-0.5637 kaj korle manus 
+-1.0142 kaj na korle 
+-1.0142 karone jawa hoy 
+-1.0142 karone manush er 
+-1.0142 karone oneker office 
+-1.0142 karone sadharon manush 
+-1.0142 karone sristi hocche 
+-1.0142 ke pohate hocche 
+-1.0142 khabar khub posondo 
+-1.0142 khaben toto soril 
+-1.0142 khabo </s> <s> 
+-1.0142 kharap bolbe </s> 
+-1.0142 kharap hoy onek 
+-1.0142 khawa utchit </s> 
+-0.5637 khela hobe </s> 
+-1.0142 khelar jonno toiri 
+-1.0142 khelar pichone onek 
+-1.3153 khelar por bashay 
+-1.3153 khelar por quiz 
+-0.5637 kheli </s> <s> 
+-1.0142 khete gesilam </s> 
+-1.3153 khub e faltu 
+-1.3153 khub e valo 
+-1.0142 khub poriskar </s> 
+-1.0142 khub posondo kori 
+-1.0142 khub slow thik 
+-1.3153 khub sundor jayga 
+-1.3153 khub sundor kore 
+-1.6163 khub valo </s> 
+-1.6163 khub valo ekta 
+-1.6163 khub valo form 
+-1.6163 khub valo lage 
+-1.0142 kintu panic rabby 
+-1.0142 kisu bad diye 
+-1.0142 kisu din lake 
+-0.5637 kisu kisu sir 
+-1.3153 kisu sir bash 
+-1.3153 kisu sir onek 
+-1.0142 kn pori ektu 
+-1.0142 kom porle o 
+-1.0142 kono kaj e 
+-1.0142 kora dorkar </s> 
+-1.0142 kora hoy </s> 
+-1.0142 korar iccha kore 
+-1.0142 korar por pabgi 
+-1.0142 korchi ebar er 
+-1.0142 korchi khub valo 
+-1.0142 korchilm </s> <s> 
+-0.1002 kore </s> <s> 
+-1.0142 kore felchi </s> 
+-1.0142 kore jai </s> 
+-1.0142 kore na </s> 
+-1.0142 kore rat dui 
+-1.0142 kore sajano </s> 
+-1.0142 korel body valo 
+-0.0792 kori </s> <s> 
+-1.0142 kori kothao ghurte 
+-1.3153 korle manus kharap 
+-1.3153 korle manus valo 
+-1.0142 korle mejas kharap 
+-1.0142 korte amr khub 
+-1.0142 korte cul tul 
+-1.0142 korte ek dom 
+-1.0142 korte korte cul 
+-1.0142 kortese ekhonoi </s> 
+-1.0142 koshto </s> <s> 
+-1.0142 kothao ghurte gele 
+-0.0969 lage </s> <s> 
+-1.3153 lage na </s> 
+-1.3153 lage na dekhe 
+-1.0142 lagle majhe moddhe 
+-1.0142 laglo </s> <s> 
+-1.4914 lake e adda 
+-1.4914 lake e dowrite 
+-1.4914 lake e jabo 
+-1.0142 last er dike 
+-1.0142 life e tour 
+-1.0142 life er sob 
+-1.0142 life hell hoye 
+-1.0142 mach onek moja 
+-1.0142 mach paoa jay 
+-1.6163 majhe moddhe amader 
+-1.6163 majhe moddhe thik 
+-1.6163 majhe moddhe vabi 
+-1.6163 majhe moddhe varsity 
+-1.0142 mane e jhamela 
+-1.0142 manus kharap bolbe 
+-1.0142 manus valo bolbe 
+-1.0142 manush er onek 
+-1.0142 manush ke pohate 
+-1.0142 marte jaitam </s> 
+-1.6163 mega project aro 
+-0.8647 mega project gulor 
+-1.6163 mega project shuru 
+-1.0142 mejas kharap hoy 
+-1.0142 mene choli </s> 
+-1.0142 mero rail </s> 
+-1.0142 mes mane e 
+-1.0142 messi sob khub 
+-1.0142 minit er moto 
+-1.0142 moddhe amader onek 
+-1.0142 moddhe boshe theke 
+-1.0142 moddhe class korte 
+-1.0142 moddhe rakha lage 
+-1.0142 moddhe thik thake 
+-1.0142 moddhe vabi eto 
+-1.0142 moddhe varsity te 
+-0.5637 moja </s> <s> 
+-1.0142 moja hoichilo </s> 
+-1.0142 moja kora hoy 
+-1.0142 moja kori </s> 
+-1.0142 moja lage na 
+-1.0142 mon romantic hoye 
+-1.3153 mon valo thakbe 
+-1.3153 mon valo thake 
+-1.0142 mone hoy pc 
+-1.0142 moto somoy lage 
+-0.0792 na </s> <s> 
+-1.3153 na dekhe aar 
+-1.3153 na dekhe abar 
+-1.0142 na korle mejas 
+-1.0142 na thakle onek 
+-1.0142 na thik vabe 
+-1.0142 nai ek dom 
+-1.0142 nanan kahini shuru 
+-1.0142 nirdeshona mene choli 
+-1.0142 niye jawa utchit 
+-1.0142 noshto hoy </s> 
+-1.0142 noshto kori </s> 
+-1.0142 nouka te o 
+-1.0142 o dey </s> 
+-1.0142 o ghurar jonno 
+-1.0142 o jawa jay 
+-1.0142 o to hoy 
+-1.0142 office e jete 
+-1.0142 onake jam </s> 
+-1.0142 onek agrohi </s> 
+-1.0142 onek cha bagan 
+-1.0142 onek enjoy kori 
+-1.0142 onek gorom lage 
+-1.0142 onek gulo mega 
+-1.0142 onek inspire kore 
+-1.0142 onek jam chilo 
+-1.0142 onek janjot </s> 
+-1.0142 onek jayga ache 
+-1.0142 onek koshto </s> 
+-0.9616 onek moja </s> 
+-1.7132 onek moja hoichilo 
+-1.7132 onek moja kora 
+-1.7132 onek moja kori 
+-1.0142 onek panic kortese 
+-1.0142 onek pressure thake 
+-1.0142 onek shamudrik mach 
+-0.5637 onek shomoy noshto 
+-1.3153 onek sundor </s> 
+-1.3153 onek sundor ekta 
+-1.0142 onek thanda </s> 
+-1.0142 onek time dey 
+-1.0142 onek tokhn mone 
+-1.0142 oneker office e 
+-1.0142 oshustho hoye jacche 
+-1.4914 pabgi khelar jonno 
+-1.4914 pabgi khelar pichone 
+-1.4914 pabgi khelar por 
+-1.0142 pabgi kheli </s> 
+-1.0142 pai na dekhe 
+-1.0142 pani khaben toto 
+-1.0142 pani khawa utchit 
+-1.0142 pani khub poriskar 
+-1.0142 panic kortese ekhonoi 
+-1.0142 panic rabby onek 
+-1.0142 paoa jay </s> 
+-1.0142 pare na thik 
+-1.0142 pc gula khub 
+-1.0142 pc thik vabe 
+-1.0142 pc venge feli 
+-1.0142 peke jacche </s> 
+-1.0142 pera ase sob 
+-1.0142 pichone onek shomoy 
+-1.0142 podma setu </s> 
+-1.0142 pohate hocche onek 
+-1.0142 por bashay eshe 
+-1.0142 por pabgi khelar 
+-1.0142 por quiz er 
+-1.0142 pora porar jonno 
+-1.0142 pora protidin sesh 
+-1.3153 pora sesh korar 
+-1.3153 pora sesh kore 
+-1.0142 pora shuru kori 
+-1.0142 porar jonno toieri 
+-1.0142 porashuna korte korte 
+-1.0142 pore kono kaj 
+-1.0142 pori </s> <s> 
+-1.0142 pori ektu kom 
+-1.0142 poriskar </s> <s> 
+-1.0142 porjapto sujog subidha 
+-1.0142 porle o to 
+-1.0142 porte boshi </s> 
+-1.0142 posondo kori </s> 
+-1.0142 presentation diye voira 
+-1.0142 pressure thake </s> 
+-1.0142 product dile nanan 
+-1.0142 proitdin bikale cricket 
+-1.0142 project aro ekti 
+-1.3153 project gulor ekti 
+-1.3153 project gulor karone 
+-1.0142 project shuru hoyeche 
+-1.0142 proti bochor duibar 
+-1.0142 protidin class e 
+-1.0142 protidin dui ghonta 
+-1.0142 protidin e dekha 
+-1.0142 protidin er pora 
+-1.0142 protidin sesh pori 
+-1.0142 protidin shokal choy 
+-1.0142 quiz assignment presentation 
+-1.0142 quiz er pora 
+-1.0142 ra khub valo 
+-1.0142 ra onek inspire 
+-1.0142 rabby onek panic 
+-1.0142 rail </s> <s> 
+-1.0142 rakha lage </s> 
+-1.0142 ram khub e 
+-1.0142 rastay ekta accident 
+-1.0142 rastay jam protidin 
+-1.0142 rastay onake jam 
+-1.0142 rastay onek jam 
+-1.0142 rat dui tay 
+-1.0142 ready hoi </s> 
+-1.0142 rokom weather e 
+-1.0142 romantic hoye thake 
+-1.0142 room hocche dt5 
+-1.0142 room onek sundor 
+-1.0142 room ta </s> 
+-1.0142 sadharon manush ke 
+-1.0142 sainmartin e ghurar 
+-1.0142 saintmartin e onek 
+-1.0142 saintmartin o ghurar 
+-1.0142 sajano </s> <s> 
+-1.0142 sathe onek moja 
+-1.0142 school e jacchi 
+-1.0142 se bar onek 
+-1.0142 sell korchilm </s> 
+-1.3153 semester er last 
+-1.3153 semester er shes 
+-1.0142 sesh korar por 
+-1.0142 sesh kore rat 
+-1.0142 sesh pori </s> 
+-1.0142 seshe abar bus 
+-1.0142 setu </s> <s> 
+-1.0142 shal e varsity 
+-1.0142 shamodrik mach onek 
+-1.0142 shamudrik mach paoa 
+-1.0142 shei somossa </s> 
+-1.0142 shes er dike 
+-1.0142 shes hoile </s> 
+-1.0142 sheshe dhanmondi lake 
+-1.0142 shodorghat jabo </s> 
+-1.0142 shokal choy tay 
+-1.0142 shokal dosh tay 
+-1.3153 shomoy noshto hoy 
+-1.3153 shomoy noshto kori 
+-1.0142 shoptahe char din 
+-1.0142 shuru hoyeche </s> 
+-0.5637 shuru kore </s> 
+-1.0142 shuru kori </s> 
+-1.0142 shymoly square khete 
+-1.0142 sir bash o 
+-1.0142 sir der deoa 
+-1.0142 sir onek time 
+-1.3153 sir ra khub 
+-1.3153 sir ra onek 
+-1.0142 slow thik vabe 
+-1.0142 sob chaite valo 
+-1.0142 sob ek bare 
+-1.0142 sob khub valo 
+-1.0142 sob kisu bad 
+-1.0142 sob theke sundor 
+-1.0142 sobai bandarban vromoner 
+-1.0142 sobar e everyday 
+-1.0142 sobar sathe onek 
+-1.0142 somossa </s> <s> 
+-1.0142 somossa shei somossa 
+-1.0142 somoy e vul 
+-1.0142 somoy er beshi 
+-1.0142 somoy lage </s> 
+-1.0142 somoy pai na 
+-1.0142 soril mon valo 
+-1.0142 square khete gesilam 
+-1.0142 sristi hocche onek 
+-1.0142 star tech er 
+-1.0142 subidha dite pare 
+-1.0142 sujog subidha dite 
+-1.0142 sundor </s> <s> 
+-1.0142 sundor ekta jayga 
+-1.0142 sundor jayga </s> 
+-1.0142 sundor kore sajano 
+-1.0142 sundor room hocche 
+-1.0142 supporter </s> <s> 
+-1.0142 sylhel e tour 
+-1.0142 sylhet e onek 
+-1.0142 sylhet er jaflong 
+-1.0142 ta </s> <s> 
+-1.0142 ta argentina e 
+-1.0142 ta onek thanda 
+-1.0142 tachara jam er 
+-1.0142 take incubator er 
+-1.0142 talar wash room 
+-1.0142 tarikh </s> <s> 
+-1.0142 tarpor class er 
+-0.5637 tay ghum theke 
+-1.0142 tay ghumate jai 
+-1.0142 te argentina vs 
+-1.0142 te bus e 
+-1.0142 te ful sell 
+-1.0142 te giye bose 
+-1.0142 te jete amar 
+-1.0142 te o jawa 
+-1.0142 te vorti hoi 
+-1.0142 tech er ram 
+-1.0142 thakbe </s> <s> 
+-0.0969 thake </s> <s> 
+-1.0142 thake na </s> 
+-1.0142 thaki </s> <s> 
+-1.0142 thakle onek gorom 
+-1.0142 thanda </s> <s> 
+-1.0142 theke e argentina 
+-1.0142 theke oshustho hoye 
+-1.0142 theke sundor room 
+-0.5637 theke uthi </s> 
+-1.0142 thik na thakle 
+-1.0142 thik thake na 
+-1.4914 thik vabe </s> 
+-0.7398 thik vabe kaj 
+-1.0142 time dey </s> 
+-1.0142 time laglo </s> 
+-1.0142 tin ghonta time 
+-1.0142 to hoy but 
+-1.0142 toieri hoi </s> 
+-1.0142 toiri hoi </s> 
+-1.0142 tokhn mone hoy 
+-1.0142 tola khub sundor 
+-1.0142 toto soril mon 
+-1.0142 tour diye onek 
+-0.4012 tour e gele 
+-1.7924 tour e jai 
+-1.7924 tour e jawar 
+-1.7924 tour e jeye 
+-1.0142 tour gele jhornay 
+-1.0142 tul peke jacche 
+-1.0142 tulbe </s> <s> 
+-0.5637 utchit </s> <s> 
+-0.5637 uthi </s> <s> 
+-1.0142 vabe </s> <s> 
+-1.3153 vabe kaj kore 
+-1.3153 vabe kaj na 
+-1.0142 vabi eto kn 
+-1.0142 vabtechi </s> <s> 
+-1.0142 valo </s> <s> 
+-1.0142 valo bolbe </s> 
+-1.0142 valo ekta khela 
+-1.0142 valo form e 
+-0.5637 valo jayga </s> 
+-1.0142 valo kaj korle 
+-1.3153 valo lage </s> 
+-1.3153 valo lage na 
+-1.0142 valo thakbe </s> 
+-0.5637 valo thake </s> 
+-1.0142 varsity amader porjapto 
+-1.4914 varsity er ac 
+-1.4914 varsity er pc 
+-1.4914 varsity er sob 
+-1.0142 varsity life e 
+-1.7132 varsity te bus 
+-1.7132 varsity te ful 
+-1.7132 varsity te giye 
+-1.7132 varsity te jete 
+-1.7132 varsity te vorti 
+-1.0142 venge feli </s> 
+-1.0142 voira dey </s> 
+-1.0142 vorti hoi </s> 
+-1.0142 vromoner jonno onek 
+-1.0142 vs brazil er 
+-1.0142 vul jinis korar 
+-1.0142 vul somoy e 
+-1.0142 wash room onek 
+-1.0142 weather e mon 
+-1.0142 weather ta onek 
+
+\end\
